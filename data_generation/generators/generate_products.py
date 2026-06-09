@@ -15,7 +15,6 @@
 import random
 import numpy as np
 import pandas as pd
-from dataclasses import dataclass
 from pathlib import Path
 
 # ── Reproducibility ────────────────────────────────────────────────────────────
@@ -272,7 +271,7 @@ def validate_products(df: pd.DataFrame) -> None:
         f"Price column must contain integer INR values, got {df['price'].dtype}"
     )
 
-    
+
     print("✓ Validation passed:")
     print(f"  Total products    : {actual_total}")
     for category, count in expected_category_counts.items():
@@ -293,7 +292,13 @@ def main():
     validate_products(df)
 
     # index=False — product_id is our explicit identifier; pandas row index is noise
-    df.to_csv(OUTPUT_FILE, index=False)
+    df["story_customer_id"] = (
+    df["story_customer_id"]
+    .fillna("")
+    .astype(str)
+)
+
+    df.to_csv(OUTPUT_PATH, index=False)
     print(f"\n✓ Products saved to: {OUTPUT_FILE}")
 
     print("\nSample rows (first 5):")
