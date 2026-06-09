@@ -1,0 +1,9 @@
+asgiref==3.11.1
+Django==5.2.15
+djangorestframework==3.17.1
+Faker==40.21.0
+numpy==2.4.6
+pandas==3.0.3
+python-dateutil==2.9.0.post0
+six==1.17.0
+sqlparse==0.5.5
