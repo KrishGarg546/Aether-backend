@@ -47,11 +47,14 @@ def parse_goal(goal: str) -> dict:
 
     parsed_goal = None
     parsed_persona = None
+    matched_goal_phrase = None
+    matched_persona_phrase = None
 
     # Identify goal type
     for goal_phrase, goal_info in GOAL_CATALOG.items():
         if goal_phrase in goal_lower:
             parsed_goal = goal_info.copy()
+            matched_goal_phrase = goal_phrase
             break
 
     if parsed_goal is None:
@@ -67,6 +70,7 @@ def parse_goal(goal: str) -> dict:
     for persona_phrase, segment in PERSONA_MAPPING.items():
         if persona_phrase in goal_lower:
             parsed_persona = segment
+            matched_persona_phrase = persona_phrase
             break
 
     return {
@@ -76,9 +80,11 @@ def parse_goal(goal: str) -> dict:
         "success_metric": parsed_goal["success_metric"],
         "target_segment": parsed_persona or "ALL_CUSTOMERS",
         "parser_reason": (
-    f"Matched goal phrase '{matched_goal_phrase}' "
-    f"and audience phrase '{matched_persona_phrase}'."
-)
+            f"Matched goal phrase '{matched_goal_phrase}'. "
+            f"Matched audience phrase '{matched_persona_phrase}'."
+            if matched_persona_phrase
+            else f"Matched goal phrase '{matched_goal_phrase}'. No audience phrase detected."
+        )
     }
 
 if __name__ == "__main__":
