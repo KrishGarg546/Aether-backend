@@ -82,6 +82,8 @@ import sys
 from datetime import datetime, timezone
 from typing import Any
 
+import uuid
+
 import pandas as pd
 
 # ---------------------------------------------------------------------------
@@ -146,7 +148,10 @@ REQUIRED_AUDIENCE_KEYS: set[str] = {
 # ---------------------------------------------------------------------------
 
 
-def generate_campaign_id(campaign_plan: dict[str, Any]) -> str:
+def generate_campaign_id(
+    campaign_plan: dict[str, Any],
+    execution_id: str | None = None,
+) -> str:
     """Generate a deterministic campaign ID from the campaign plan.
 
     The ID is derived by hashing a stable composite key built from
@@ -176,7 +181,10 @@ def generate_campaign_id(campaign_plan: dict[str, Any]) -> str:
     goal_type: str = campaign_plan.get("goal_type", "UNKNOWN").upper().strip()
     campaign_type: str = campaign_plan.get("campaign_type", "UNKNOWN").upper().strip()
 
-    composite_key: str = f"AETHER|CAMPAIGN|{goal_type}|{campaign_type}"
+    execution_component: str = execution_id or "STATIC"
+    composite_key: str = (
+        f"AETHER|CAMPAIGN|{goal_type}|{campaign_type}|{execution_component}"
+    )
     digest: str = hashlib.sha256(composite_key.encode("utf-8")).hexdigest()
 
     # Take the first 16 hex characters for a compact but collision-resistant ID.
@@ -364,7 +372,15 @@ def generate_communications(
     # 3. Generate stable identifiers.
     # ------------------------------------------------------------------
 
-    campaign_id: str = generate_campaign_id(campaign_plan)
+    # Demo-safe execution: every pipeline run receives a unique
+    # campaign instance identifier so repeated executions of the
+    # same marketer goal generate fresh communications, receipts,
+    # and insights.
+    execution_id: str = uuid.uuid4().hex[:12].upper()
+    campaign_id: str = generate_campaign_id(
+        campaign_plan,
+        execution_id=execution_id,
+    )
 
     # Capture batch creation time once — all records share this timestamp.
     created_at: str = datetime.now(tz=timezone.utc).strftime("%Y-%m-%dT%H:%M:%SZ")
@@ -549,7 +565,7 @@ def save_communications(
 
     os.makedirs(resolved_dir, exist_ok=True)
 
-    campaign_id: str = generate_campaign_id(campaign_plan)
+    campaign_id: str = records[0]["campaign_id"]
 
     filename: str = COMMUNICATIONS_FILENAME_TEMPLATE.format(
         campaign_id=campaign_id

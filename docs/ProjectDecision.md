@@ -6,19 +6,34 @@ The goal is to preserve reasoning behind decisions, maintain consistency as the 
 
 ---
 
+# Executive Summary
+
+Aether is a goal-driven AI marketing execution platform designed for the Xeno internship challenge.
+
+Its purpose is to translate marketer objectives into measurable campaign outcomes through a deterministic, explainable, and production-inspired architecture.
+
+Current locked execution pipeline:
+
+Goal Parser
+→ Audience Selector
+→ Campaign Planner
+→ Communication Manager
+→ Channel Service
+→ Receipt API
+→ Insights Engine
+
+Core philosophy:
+- Deterministic over stochastic.
+- Explainability over complexity.
+- Product thinking over isolated ML models.
+- Free-tier deployability over infrastructure dependence.
+- End-to-end ownership over disconnected components.
+
+---
+
 ## Project Vision
 
-Aether CRM is an AI-native CRM platform designed for the Xeno internship challenge.
-
-The objective is not simply to build a dashboard, but to demonstrate how AI can be integrated throughout the CRM lifecycle:
-
-- customer understanding,
-- segmentation,
-- campaign intelligence,
-- next-best-action recommendations,
-- and marketing decision support.
-
-The project prioritizes practicality, explainability, and deployability.
+The objective is to demonstrate a goal-driven marketing agent that translates marketer intent into measurable campaign outcomes. Rather than showcasing isolated ML models or dashboards, Aether emphasizes autonomous decision-making, execution orchestration, explainability, and product-oriented engineering.
 
 ---
 
@@ -181,37 +196,28 @@ Generated text should enhance recommendations rather than replace them.
 
 ---
 
-# Current Pipeline Status
+# Current Development Status
+
+## Backend Progress
 
 Completed:
 
-✓ generate_products.py
-
-✓ generate_customers.py
-
-✓ generate_story_customers.py
-
-✓ generate_orders.py
-
-✓ generate_customer_features.py
-
-In Progress:
-
-• Customer Intelligence Layer
+✓ Django Backend Integration
+✓ REST API Layer
+✓ Campaign Execution Persistence
+✓ Campaign History Endpoints
+✓ Campaign Detail Endpoints
+✓ Django Admin Visibility
+✓ Automated Backend Testing
+✓ Repository Documentation
 
 Planned:
 
-• Churn Prediction
-
-• CLV Estimation
-
-• Next Best Action Engine
-
-• Campaign Recommendation Engine
-
-• Dashboard Integration
-
-• Vercel Deployment
+• React / Next.js Frontend
+• Dashboard Experience
+• Deployment Pipeline
+• Authentication and Authorization
+• Final Evaluation Preparation
 
 ---
 
@@ -587,29 +593,6 @@ Design Principles:
 Status:
 LOCKED
 
-## Audience Selector V1 Locked
-
-Date: 2026-06-10
-
-Decision:
-Audience selection in Aether will be deterministic and rule-based.
-
-Input:
-- Goal Parser output
-- customer_intelligence.csv
-
-Output:
-- selected_customers
-- selection_score
-- campaign_priority
-- audience CSV exports
-
-Rationale:
-Audience selection represents business reasoning rather than prediction.
-Deterministic logic improves explainability and aligns with the Xeno challenge.
-
-Status:
-LOCKED
 
 ## Decision: Channel Services Separated from Campaign Brain
 
@@ -793,3 +776,384 @@ The Xeno assignment evaluates product thinking and engineering execution. Demons
 
 Status:
 LOCKED
+# System Freeze Summary (V1)
+
+The following modules are considered architecturally locked:
+
+✓ Intelligence Engine
+✓ Goal Parser
+✓ Audience Selector
+✓ Campaign Planner
+✓ Communication Manager
+✓ Channel Service
+✓ Receipt API
+✓ Insights Engine
+✓ End-to-End Aether Orchestrator
+
+Future development should prioritize integration rather than redesign.
+
+Next milestone sequence:
+
+1. Django backend completion.
+2. Backend repository publication.
+3. Comprehensive README creation.
+4. React/Next.js frontend implementation.
+5. Full-stack deployment.
+6. Interview preparation and demonstration polishing.
+
+Status: BACKEND V1 COMPLETE
+
+## Django Integration Strategy (V1)
+
+Date: 2026-06-10
+
+Decision:
+Aether will expose its deterministic marketing execution pipeline through a Django REST API.
+
+Rationale:
+The Xeno FDA role values product ownership and production-minded engineering. Providing API access demonstrates how Aether could integrate into real-world systems.
+
+Design Principles:
+- Existing pipeline modules remain framework-agnostic.
+- Django acts as an orchestration and delivery layer.
+- aether.py remains executable as a standalone demonstration entrypoint.
+- Business logic should never migrate into Django views.
+- Views call service functions rather than implementing marketing logic directly.
+
+Initial API Endpoints:
+- POST /api/run-campaign/
+- GET /api/insights/
+- GET /api/campaigns/
+
+Status:
+LOCKED
+
+## Aether Public API Boundary (2026-06-10)
+
+Decision:
+The orchestrator (aether.py) exposes two public functions:
+
+- run_pipeline(goal)
+- build_api_response(results)
+
+Rationale:
+Django should consume Aether through a stable interface rather than depending directly on internal pipeline outputs.
+
+Consequences:
+- pandas DataFrames remain internal implementation details.
+- DRF views remain thin.
+- Business logic stays outside Django.
+- Future interfaces (CLI, frontend, Celery workers) can reuse the same entrypoints.
+
+Status:
+ACCEPTED
+
+## Decision: Goal Parser Strategy (V2)
+
+### Problem
+
+Marketers express identical business objectives using different language patterns. A rigid phrase-to-objective mapping results in poor usability and frequent manual intervention.
+
+Examples:
+
+- "Reduce churn among premium users"
+- "Win back inactive customers"
+- "Bring back dormant users"
+
+All represent the same business intent.
+
+---
+
+### Alternatives Considered
+
+#### Option 1: Exact Phrase Matching
+
+Pros:
+- Simple implementation
+- Fully deterministic
+
+Cons:
+- Extremely brittle
+- Poor marketer experience
+- Low real-world applicability
+
+Decision: Rejected.
+
+---
+
+#### Option 2: Embedding-Based Semantic Matching
+
+Pros:
+- High flexibility
+- Better understanding of natural language
+
+Cons:
+- Additional infrastructure complexity
+- Increased dependencies
+- Reduced explainability
+- Harder to evaluate under assignment constraints
+
+Decision: Deferred for future versions.
+
+---
+
+#### Option 3: Rule-Based NLP with Synonym Expansion
+
+Pros:
+- Deterministic and explainable
+- Handles varied marketer phrasing
+- Easy to test and extend
+- Appropriate complexity for assignment scope
+
+Cons:
+- Requires ongoing synonym maintenance
+
+Decision: Accepted.
+
+---
+
+### Final Architecture
+
+User Goal
+→ Text Normalization
+→ Phrase/Synonym Matching
+→ Structured Objective Mapping
+→ Audience Selection
+→ Campaign Planning
+
+---
+
+### Future Evolution
+
+Aether may evolve this component into an embedding-based intent classification system once production-scale requirements justify additional complexity.
+
+Current implementation prioritizes transparency, robustness, and interview explainability.
+
+Decision #008 – Goal Parser V2
+
+* Replaced exact phrase matching with rule-based semantic matching.
+* Added support for multiple marketer phrasings per objective.
+* Introduced text normalization before intent detection.
+* Introduced MANUAL_REVIEW fallback instead of pipeline failure.
+* Deferred embedding/LLM-based intent classification to future versions.
+* Rationale:
+    * Deterministic.
+    * Explainable.
+    * Easy to test.
+    * Suitable for assignment scope.
+    * Architecturally compatible with future LLM replacement.
+
+## Goal Parser V2 Validation
+
+Date: 2026-06-10
+
+Validation Status: PASSED
+
+Validated Objectives:
+- REACTIVATION
+- UPSELL
+- CROSS_SELL
+- LOYALTY
+
+Validation Method:
+Standalone parser execution against representative marketer goals.
+
+Observed Outcome:
+The parser successfully translated varied marketer language into structured campaign objectives while preserving deterministic behaviour and explainable reasoning.
+
+Decision:
+Goal Parser V2 is considered production-ready for assignment scope.
+
+Future Work:
+Expand persona vocabulary coverage before introducing ML-based intent classification.
+
+Status:
+LOCKED
+
+## Decision: Interactive Goal Input with Deterministic Fallback
+
+Date: 2026-06-10
+
+### Context
+Aether originally relied on hardcoded demonstration goals inside
+`aether.py`.
+
+While useful during development, this prevented evaluators from
+testing arbitrary marketer objectives without modifying source code.
+
+### Decision
+Aether will prompt users for a natural-language marketing goal during
+CLI execution.
+
+If no goal is supplied, the system will automatically execute a
+deterministic default scenario:
+
+    "Reduce churn among inactive premium customers"
+
+### Rationale
+
+Benefits:
+- Enables reviewers to explore multiple use cases.
+- Demonstrates the goal-driven nature of Aether.
+- Preserves reproducible demo behaviour.
+- Improves usability without introducing infrastructure complexity.
+
+Tradeoffs:
+- CLI execution becomes interactive.
+- Automated scripts may require stdin handling.
+
+### Status
+ACCEPTED
+
+Decision: Demo-Safe Campaign Execution
+
+Date: 2026-06-10
+
+Context
+
+Aether uses deterministic communication identifiers and an append-only receipt ledger.
+
+Repeated execution of identical campaigns caused duplicate callback detection, preventing downstream insight generation.
+
+Decision
+
+For evaluation environments, each pipeline execution will generate a unique campaign instance identifier.
+
+Communication identifiers remain deterministic within a campaign instance.
+
+Rationale
+
+Benefits:
+
+* Enables repeated demonstrations.
+* Preserves immutable receipt history.
+* Avoids evaluator confusion.
+* Maintains production-inspired behaviour.
+
+Tradeoffs:
+
+* Identical goals executed at different times will produce different campaign instances.
+
+Status
+
+ACCEPTED
+
+## Decision: Demo-Safe Campaign Instances
+
+### Context
+Deterministic campaign identifiers caused repeated executions of identical marketer goals to generate duplicate communication identifiers, preventing new receipt generation.
+
+### Decision
+Campaigns now generate a unique execution identifier for each pipeline run. Communication identifiers remain deterministic within a campaign instance.
+
+### Rationale
+- Supports repeated demonstrations.
+- Enables evaluator experimentation.
+- Preserves immutable receipt history.
+- Maintains production-inspired architecture.
+
+### Tradeoff
+Identical goals executed at different times produce distinct campaign instances.
+
+### Status
+ACCEPTED
+
+# Backend V1 Completion Summary
+
+Date: 2026-06-10
+
+Status: BACKEND V1 LOCKED
+
+The deterministic Aether backend is considered feature complete for the Xeno evaluation scope.
+
+Implemented Components:
+- Goal Parser V2
+- Audience Selector V1
+- Campaign Planner V1
+- Communication Manager V1
+- Channel Service V1
+- Receipt API V1
+- Insights Engine V1
+- End-to-End Pipeline Orchestrator
+- Django REST Integration
+- Campaign Execution Persistence
+- Campaign History Endpoints
+- Campaign Detail Endpoints
+- Django Admin Visibility
+
+Public API Surface:
+- POST /api/run-campaign/
+- GET /api/campaigns/
+- GET /api/campaigns/<id>/
+
+Architectural Principle:
+Business logic remains framework-agnostic.
+Django serves as an orchestration and delivery layer rather than a location for marketing intelligence.
+
+Evaluation Outcome:
+Aether demonstrates end-to-end ownership from marketer goal definition through audience selection, campaign planning, simulated execution, receipt generation, insight production, and historical reporting.
+
+Future Scope (Post-Evaluation):
+- Frontend dashboard implementation.
+- Authentication and multi-user support.
+- Real communication provider integrations.
+- Asynchronous task execution.
+- ML-assisted intent understanding.
+- Advanced campaign analytics.
+
+Status:
+LOCKED
+
+# Testing Strategy (V1)
+
+Decision:
+The Aether backend should be protected by lightweight automated tests focused on deterministic behaviour and integration stability.
+
+Testing Priorities:
+- Goal parser objective mapping.
+- Audience selector output validation.
+- Campaign planner consistency.
+- Communication identifier uniqueness within campaign instances.
+- Receipt generation validation.
+- Insights engine metric correctness.
+- Django API endpoint behaviour.
+
+Rationale:
+Assignment evaluation prioritizes reliability and engineering discipline over exhaustive test coverage.
+
+Status:
+ACCEPTED
+
+# Repository Publication Checklist
+
+Before repository publication:
+
+- Ensure README accurately reflects final architecture.
+- Remove temporary debugging output.
+- Confirm requirements.txt is up to date.
+- Verify migrations are committed.
+- Include API usage examples.
+- Include setup instructions for local execution.
+- Include screenshots of Django Admin and DRF endpoints.
+- Verify all major modules contain docstrings.
+
+Status:
+PENDING FINAL REVIEW
+
+# Backend Validation Summary
+
+Date: 2026-06-11
+
+Status: ACCEPTED
+
+Validated Components:
+- Goal Parser tests
+- Run Campaign API tests
+- Campaign History API tests
+- Campaign Detail API tests
+
+Outcome:
+The Backend V1 implementation passed deterministic validation across the primary marketer workflow. The system successfully demonstrated end-to-end execution from marketer goal interpretation through campaign persistence and historical retrieval.
+
+Decision:
+Backend V1 is considered complete for the Xeno evaluation scope. Future effort should prioritize presentation quality, frontend implementation, deployment, and interview preparation rather than backend redesign.

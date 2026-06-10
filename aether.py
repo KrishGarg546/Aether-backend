@@ -213,7 +213,7 @@ _STAGE_LABELS: list[str] = [
 # ---------------------------------------------------------------------------
 
 
-def run_pipeline(goal: str) -> dict[str, Any]:
+def run_pipeline(goal: str | None = None) -> dict[str, Any]:
     """
     Orchestrate the complete Aether execution pipeline for a marketer goal.
 
@@ -273,6 +273,15 @@ def run_pipeline(goal: str) -> dict[str, Any]:
       included as a first-class output to support dashboard rendering and CI
       validation without requiring callers to re-run the pipeline.
     """
+    # Normalize the incoming goal so both the CLI and DRF layer can
+    # support reviewer-friendly defaults.
+    default_goal: str = "Reduce churn among inactive premium customers"
+
+    normalized_goal: str = (
+        goal.strip()
+        if isinstance(goal, str) and goal.strip()
+        else default_goal
+    )
     # Initialise output slots and stage tracking.
     parsed_goal: dict[str, Any] | None = None
     audience: dict[str, Any] | None = None
@@ -298,7 +307,7 @@ def run_pipeline(goal: str) -> dict[str, Any]:
         print("[aether] WARNING – Goal Parser module is unavailable.", file=sys.stderr)
     else:
         try:
-            parsed_goal = parse_goal(goal)
+            parsed_goal = parse_goal(normalized_goal)
 
             # Temporary compatibility bridge:
             # Goal Parser emits business-oriented goal types (e.g. reduce_churn)
@@ -551,7 +560,7 @@ def run_pipeline(goal: str) -> dict[str, Any]:
     # the stage did not produce output, not that the key is absent.
     # ──────────────────────────────────────────────────────────────────────────
     return {
-        "goal":           goal,
+        "goal":           normalized_goal,
         "parsed_goal":    parsed_goal,
         "audience":       audience,
         "campaign":       campaign,
@@ -559,6 +568,42 @@ def run_pipeline(goal: str) -> dict[str, Any]:
         "receipts":       receipts,
         "insights":       insights,
         "stage_status":   stage_status,
+    }
+
+
+# ---------------------------------------------------------------------------
+# API response builder for Django/DRF integration
+# ---------------------------------------------------------------------------
+
+def build_api_response(results: dict[str, Any]) -> dict[str, Any]:
+    """Convert pipeline results into a JSON-serialisable API payload.
+
+    This helper is intended for Django/DRF integration. It extracts the
+    high-level outputs marketers care about while avoiding direct exposure
+    of pandas DataFrames through the API layer.
+    """
+    parsed_goal = results.get("parsed_goal") or {}
+    audience = results.get("audience") or {}
+    campaign = results.get("campaign") or {}
+    communications = results.get("communications") or []
+    receipts = results.get("receipts")
+    insights = results.get("insights") or {}
+
+    receipt_count = 0
+    if isinstance(receipts, pd.DataFrame):
+        receipt_count = len(receipts)
+
+    recommendations: list[str] = insights.get("recommendations", [])
+
+    return {
+        "goal": results.get("goal"),
+        "objective": parsed_goal.get("campaign_objective"),
+        "audience_size": audience.get("audience_size"),
+        "campaign_name": campaign.get("campaign_name"),
+        "communications_generated": len(communications),
+        "receipt_events_processed": receipt_count,
+        "recommendations": recommendations,
+        "stage_status": results.get("stage_status", {}),
     }
 
 
@@ -714,8 +759,17 @@ def main() -> None:
     print("AETHER: End-to-End Goal-Driven Marketing Execution Pipeline")
     print("=" * 60)
 
-    # ── Demo goal (matches ProjectDecision.md example) ────────────────────────
-    demo_goal: str = "Reduce churn among inactive premium customers"
+    # Allow reviewers to provide their own marketing goal while preserving
+    # a deterministic fallback scenario for demonstrations.
+    default_goal: str = "Reduce churn among inactive premium customers"
+
+    print("\nEnter a marketing goal (press Enter to use the demo goal).")
+    user_goal: str = input(
+        f"Goal [{default_goal}]: "
+    ).strip()
+
+    demo_goal: str = user_goal or default_goal
+
     print(f"\nGoal: {demo_goal}\n")
 
     # ── Execute ───────────────────────────────────────────────────────────────
