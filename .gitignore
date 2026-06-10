@@ -6,3 +6,4 @@ db.sqlite3
 data_generation/data/*.csv
 node_modules/
 .DS_Store
+data_generation/data/selected_audiences/

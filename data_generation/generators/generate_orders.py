@@ -81,10 +81,10 @@ QTY_MAX = 4
 # ---------------------------------------------------------------------------
 # I/O paths — relative to project root
 # ---------------------------------------------------------------------------
-INPUT_CUSTOMERS_PATH       = "data/customers.csv"
-INPUT_PRODUCTS_PATH        = "data/products.csv"
-INPUT_STORY_CUSTOMERS_PATH = "data/story_customers.csv"
-OUTPUT_ORDERS_PATH         = "data/orders.csv"
+INPUT_CUSTOMERS_PATH = "data_generation/data/customers.csv"
+INPUT_PRODUCTS_PATH = "data_generation/data/products.csv"
+INPUT_STORY_CUSTOMERS_PATH = "data_generation/data/story_customers.csv"
+OUTPUT_ORDERS_PATH = "data_generation/data/orders.csv"
 
 
 # ==============================================================================
