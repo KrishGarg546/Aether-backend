@@ -500,10 +500,14 @@ def save_communications(
 ) -> str:
     """Export communication records to a CSV file.
 
-    Writes all records to ``data_generation/data/communications.csv``.
-    If the file already exists it is overwritten (last campaign run wins).
-    Downstream modules (Channel Service, Insights) should treat this file
-    as the authoritative communication manifest for the most recent run.
+    Writes all records to a campaign-specific CSV file named using the
+    campaign ID convention:
+
+        communications_<campaign_id>.csv
+
+    This prevents multiple campaign executions from overwriting each other
+    and allows downstream modules (Channel Service and Receipt API) to load
+    communications for a specific campaign deterministically.
 
     Parameters
     ----------
@@ -680,9 +684,9 @@ def main() -> None:
     audience_selector or campaign_planner at runtime, keeping the
     module independently runnable during development.
 
-    Note: Because each scenario overwrites the same communications.csv,
-    only the final scenario's records will persist after the smoke test.
-    In production, campaigns are processed one at a time.
+    Note: Each scenario writes to its own campaign-specific communications
+    CSV using the campaign ID naming convention. Multiple smoke-test runs
+    therefore coexist safely without overwriting previous outputs.
     """
 
     # ------------------------------------------------------------------

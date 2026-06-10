@@ -1,0 +1,11 @@
+{
+  "campaign_name": "Aether REWARDS Campaign",
+  "goal_type": "LOYALTY",
+  "campaign_type": "REWARDS",
+  "recommended_channel": "EMAIL",
+  "recommended_offer": "Loyalty Reward",
+  "message_theme": "Celebrate loyalty with exclusive benefits.",
+  "audience_size": 50,
+  "success_metric": "Loyalty programme enrolment uplift of 25%",
+  "execution_reason": "Campaign type REWARDS selected because the goal_type 'LOYALTY' maps to this strategy in the Aether campaign rules. EMAIL chosen as the recommended channel because it was the most common preferred channel among the 50 selected customers in the customer intelligence dataset. Offer 'Loyalty Reward' selected because it was the most frequently recommended offer across the target audience."
+}

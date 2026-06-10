@@ -1,0 +1,11 @@
+{
+  "campaign_name": "Aether RECOMMENDATION Campaign",
+  "goal_type": "CROSS_SELL",
+  "campaign_type": "RECOMMENDATION",
+  "recommended_channel": "EMAIL",
+  "recommended_offer": "Loyalty Reward",
+  "message_theme": "Discover products tailored to your interests.",
+  "audience_size": 50,
+  "success_metric": "Cross-category purchase rate > 8%",
+  "execution_reason": "Campaign type RECOMMENDATION selected because the goal_type 'CROSS_SELL' maps to this strategy in the Aether campaign rules. EMAIL chosen as the recommended channel because it was the most common preferred channel among the 50 selected customers in the customer intelligence dataset. Offer 'Loyalty Reward' selected because it was the most frequently recommended offer across the target audience."
+}

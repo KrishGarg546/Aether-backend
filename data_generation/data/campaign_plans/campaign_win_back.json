@@ -1,0 +1,11 @@
+{
+  "campaign_name": "Aether WIN_BACK Campaign",
+  "goal_type": "REACTIVATION",
+  "campaign_type": "WIN_BACK",
+  "recommended_channel": "EMAIL",
+  "recommended_offer": "Win-back Discount",
+  "message_theme": "Reconnect and rediscover value.",
+  "audience_size": 50,
+  "success_metric": "Reactivation rate > 10%",
+  "execution_reason": "Campaign type WIN_BACK selected because the goal_type 'REACTIVATION' maps to this strategy in the Aether campaign rules. EMAIL chosen as the recommended channel because it was the most common preferred channel among the 50 selected customers in the customer intelligence dataset. Offer 'Win-back Discount' selected because it was the most frequently recommended offer across the target audience."
+}
