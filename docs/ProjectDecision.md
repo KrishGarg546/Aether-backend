@@ -610,3 +610,186 @@ Deterministic logic improves explainability and aligns with the Xeno challenge.
 
 Status:
 LOCKED
+
+## Decision: Channel Services Separated from Campaign Brain
+
+Date: 2026-06-10
+
+Reason:
+Aether distinguishes between decision-making and execution.
+
+The Campaign Brain decides:
+- what goal is being pursued,
+- which customers should be targeted,
+- what campaign strategy should be used.
+
+Channel Services are responsible only for simulating message delivery through different communication channels.
+
+This separation follows the Single Responsibility Principle and makes future integration with real providers easier.
+
+Architecture:
+
+Goal Parser
+↓
+Audience Selector
+↓
+Campaign Planner
+↓
+Channel Router
+↓
+Email / WhatsApp / SMS / RCS Services
+↓
+Campaign Executor
+↓
+Insights
+
+Decision: Model channel delivery as a separate callback-driven service rather than direct delivery methods.
+
+## Campaign Planner V1 Locked
+
+Date: 2026-06-10
+
+Decision:
+Campaign planning will transform selected audiences and parsed goals into structured campaign manifests.
+
+Responsibilities:
+- Determine campaign type.
+- Recommend channel strategy.
+- Select offers and messaging themes.
+- Generate campaign metadata for downstream execution.
+
+Non-responsibilities:
+- Audience selection.
+- Communication generation.
+- Channel execution.
+
+Design Principles:
+- Goal-driven.
+- Deterministic.
+- Explainable.
+- Marketer-centric.
+
+Status:
+LOCKED
+
+## Communication Manager V1 Locked
+
+Date: 2026-06-10
+
+Decision:
+The Communication Manager is responsible for converting campaign plans into executable communication manifests.
+
+Responsibilities:
+- Generate one communication record per customer.
+- Produce deterministic communication identifiers.
+- Export communications for execution services.
+- Preserve campaign traceability.
+
+Non-responsibilities:
+- Message delivery.
+- Receipt generation.
+- Campaign analytics.
+
+Status:
+LOCKED
+
+## Channel Service V1 Locked
+
+Date: 2026-06-10
+
+Decision:
+Channel execution in Aether will be simulated through a deterministic callback-driven Channel Service.
+
+Rationale:
+Real providers are asynchronous and probabilistic. Deterministic simulation preserves reproducibility while demonstrating production-inspired architecture.
+
+Design Principles:
+- Append-only event generation.
+- Receipt API as the single source of truth.
+- Deterministic delivery outcomes derived from communication identifiers.
+- Channel-specific engagement behaviour.
+- Reproducible smoke tests.
+
+Supported Channels:
+- EMAIL
+- SMS
+- PUSH
+- WHATSAPP
+
+Status:
+LOCKED
+
+## Receipt API V1 Locked
+
+Date: 2026-06-10
+
+Decision:
+The Receipt API serves as Aether's immutable communication event ledger.
+
+Responsibilities:
+- Persist lifecycle events.
+- Validate event schemas.
+- Maintain append-only storage semantics.
+- Provide historical execution records.
+
+Non-responsibilities:
+- Event generation.
+- Campaign analytics.
+- Delivery simulation.
+
+Design Principles:
+- Append-only architecture.
+- Deterministic behaviour.
+- CSV-first persistence.
+- Framework independence.
+
+Status:
+LOCKED
+
+## Insights Engine V1 Locked
+
+Date: 2026-06-10
+
+Decision:
+Campaign insights will be generated exclusively from immutable receipt data.
+
+Rationale:
+Execution systems and analytics systems should remain separated. Insights must never mutate execution history.
+
+Metric Definitions:
+- delivery_rate = DELIVERED / DISPATCHED × 100
+- open_rate = (OPENED + READ) / DELIVERED × 100
+- click_rate = CLICKED / DELIVERED × 100
+- failure_rate = FAILED / DISPATCHED × 100
+
+Design Principles:
+- Read-only consumption of receipt logs.
+- Deterministic calculations.
+- Explainable recommendations.
+- Graceful handling of missing data.
+- Channel-level and campaign-level reporting.
+
+Status:
+LOCKED
+
+## Aether Architecture Decision
+
+Date: 2026-06-10
+
+Decision:
+Aether will be implemented as a goal-driven marketing execution pipeline rather than a collection of independent ML components.
+
+Pipeline:
+Goal Parser
+→ Audience Selector
+→ Campaign Planner
+→ Communication Manager
+→ Channel Service
+→ Receipt API
+→ Insights Engine
+
+Rationale:
+The Xeno assignment evaluates product thinking and engineering execution. Demonstrating autonomous progression from marketer goal to measurable outcomes better reflects Forward Deployed Engineering responsibilities than isolated predictive models.
+
+Status:
+LOCKED
