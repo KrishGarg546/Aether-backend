@@ -767,22 +767,17 @@ Product affinity lives in a separate generator from customer intelligence, becau
 
 ---
 
-## Why This Project Is Relevant for Xeno's FDA Role
+## Engineering Outcomes
 
-Xeno's Forward Deployed Engineering role requires engineers who can translate ambiguous business problems into working systems, communicate technical decisions to non-technical stakeholders, and operate across the full stack from data to API to product.
+Aether demonstrates the design and implementation of an end-to-end decision system that translates business objectives into measurable actions.
 
-Aether demonstrates exactly this:
+Key outcomes include:
 
-| Xeno FDA Requirement | How Aether Demonstrates It |
-|---|---|
-| Translate business goals into executable workflows | The entire pipeline exists to solve this problem — a marketer's intent becomes a measurable campaign outcome |
-| Work across the full stack | Data generation → intelligence → pipeline → API → persistence → testing |
-| Build systems that non-technical users can trust | Explainability is a first-class design constraint, not an afterthought |
-| Make pragmatic architectural decisions | Every decision is documented with alternatives considered and trade-offs recorded |
-| Deliver end-to-end, not just components | Aether is a complete system, not a collection of notebooks |
-| Operate without expensive infrastructure | Free-tier deployable with zero paid API dependencies |
-
----
+- Converting ambiguous goals into structured execution strategies.
+- Building explainable intelligence systems that support non-technical stakeholders.
+- Maintaining deterministic behaviour across a multi-stage pipeline.
+- Designing components with clear ownership boundaries and extensibility.
+- Delivering a deployable system without reliance on expensive infrastructure.
 
 <details>
 <summary><strong>Interview Talking Points</strong></summary>
