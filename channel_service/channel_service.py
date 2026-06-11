@@ -296,7 +296,18 @@ def load_communications(path: str | None = None) -> pd.DataFrame:
             f"Run the Communication Manager first to generate this file."
         )
 
-    df: pd.DataFrame = pd.read_csv(resolved_path, dtype=str)
+    try:
+        df: pd.DataFrame = pd.read_csv(
+            resolved_path,
+            dtype=str,
+            engine="python",
+        )
+    except pd.errors.ParserError as exc:
+        raise ValueError(
+            f"[channel_service] Failed to parse communications CSV at '{resolved_path}'. "
+            f"This usually indicates unescaped commas or malformed rows in the "
+            f"Communication Manager output. Original error: {exc}"
+        ) from exc
 
     # Strip surrounding whitespace from every string column.
     df = df.apply(lambda col: col.str.strip() if col.dtype == object else col)

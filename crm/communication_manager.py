@@ -76,6 +76,8 @@ Or import and call programmatically:
 
 from __future__ import annotations
 
+import csv
+
 import hashlib
 import os
 import sys
@@ -390,6 +392,9 @@ def generate_communications(
     f"Offer: {campaign_plan['recommended_offer']}"
 )
 
+# Prevent malformed CSV rows caused by embedded newlines.
+    message = " ".join(message.splitlines())
+
     # ------------------------------------------------------------------
     # 4. Build one record per customer.
     # ------------------------------------------------------------------
@@ -577,7 +582,12 @@ def save_communications(
     )
 
     df: pd.DataFrame = pd.DataFrame(records, columns=COMMUNICATION_COLUMNS)
-    df.to_csv(output_path, index=False)
+    df.to_csv(
+        output_path,
+        index=False,
+        quoting=csv.QUOTE_ALL,
+        escapechar="\\",
+    )
 
     campaign_type: str = campaign_plan.get("campaign_type", "UNKNOWN")
     print(

@@ -80,6 +80,7 @@ from __future__ import annotations
 
 import sys
 import traceback
+from pathlib import Path
 from typing import Any
 
 import pandas as pd
@@ -208,6 +209,38 @@ _STAGE_LABELS: list[str] = [
 ]
 
 
+
+# ---------------------------------------------------------------------------
+# Intelligence Asset Loader (helper)
+# ---------------------------------------------------------------------------
+
+BASE_DIR = Path(__file__).resolve().parent
+DATA_DIR = BASE_DIR / "data_generation" / "data"
+
+
+def load_intelligence_assets() -> dict[str, pd.DataFrame | None]:
+    """Load precomputed intelligence assets.
+
+    These assets are generated offline and consumed during campaign
+    execution. They must never be regenerated inside the orchestrator.
+    """
+    assets = {
+        "customer_health": DATA_DIR / "customer_health.csv",
+        "customer_stories": DATA_DIR / "customer_stories.csv",
+        "personalized_campaigns": DATA_DIR / "personalized_campaigns.csv",
+    }
+
+    loaded_assets: dict[str, pd.DataFrame | None] = {}
+
+    for name, path in assets.items():
+        try:
+            loaded_assets[name] = pd.read_csv(path)
+        except Exception:
+            loaded_assets[name] = None
+
+    return loaded_assets
+
+
 # ---------------------------------------------------------------------------
 # Public API
 # ---------------------------------------------------------------------------
@@ -289,6 +322,7 @@ def run_pipeline(goal: str | None = None) -> dict[str, Any]:
     communications: list[dict[str, Any]] | None = None
     receipts: pd.DataFrame | None = None
     insights: dict[str, Any] | None = None
+    intelligence_assets = load_intelligence_assets()
 
     # stage_status maps each stage label to a short outcome string.
     # Populated incrementally as each stage runs.
@@ -309,11 +343,11 @@ def run_pipeline(goal: str | None = None) -> dict[str, Any]:
         try:
             parsed_goal = parse_goal(normalized_goal)
 
-            # Temporary compatibility bridge:
-            # Goal Parser emits business-oriented goal types (e.g. reduce_churn)
-            # while the Audience Selector currently expects execution-oriented
-            # campaign categories. Normalize the values here until the contracts
-            # are unified across modules.
+            # Temporary compatibility bridge between business-oriented goals
+            # emitted by the Goal Parser and execution-oriented audience
+            # categories expected by the Audience Selector. Ambiguous goals
+            # fall back to RETENTION to preserve full pipeline execution
+            # during demonstrations.
             if isinstance(parsed_goal, dict):
                 goal_type = str(parsed_goal.get("goal_type", "")).lower()
 
@@ -323,6 +357,7 @@ def run_pipeline(goal: str | None = None) -> dict[str, Any]:
                     "upsell": "UPSELL",
                     "cross_sell": "CROSS_SELL",
                     "loyalty": "LOYALTY",
+                    "manual_review": "RETENTION",
                 }
 
                 if goal_type in goal_type_mapping:
@@ -567,6 +602,7 @@ def run_pipeline(goal: str | None = None) -> dict[str, Any]:
         "communications": communications,
         "receipts":       receipts,
         "insights":       insights,
+        "intelligence_assets": intelligence_assets,
         "stage_status":   stage_status,
     }
 
@@ -588,6 +624,7 @@ def build_api_response(results: dict[str, Any]) -> dict[str, Any]:
     communications = results.get("communications") or []
     receipts = results.get("receipts")
     insights = results.get("insights") or {}
+    intelligence_assets = results.get("intelligence_assets") or {}
 
     receipt_count = 0
     if isinstance(receipts, pd.DataFrame):
@@ -603,6 +640,10 @@ def build_api_response(results: dict[str, Any]) -> dict[str, Any]:
         "communications_generated": len(communications),
         "receipt_events_processed": receipt_count,
         "recommendations": recommendations,
+        "intelligence_assets_loaded": {
+            key: value is not None
+            for key, value in intelligence_assets.items()
+        },
         "stage_status": results.get("stage_status", {}),
     }
 

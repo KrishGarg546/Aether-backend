@@ -59,6 +59,7 @@ Or import and call programmatically:
 from __future__ import annotations
 
 import hashlib
+import csv
 import os
 import sys
 from datetime import datetime, timezone
@@ -193,7 +194,18 @@ def load_receipts(path: str | None = None) -> pd.DataFrame:
     if not os.path.isfile(resolved_path):
         return pd.DataFrame(columns=RECEIPT_COLUMNS)
 
-    df: pd.DataFrame = pd.read_csv(resolved_path, dtype=str)
+    try:
+        df: pd.DataFrame = pd.read_csv(
+            resolved_path,
+            dtype=str,
+            engine="python",
+        )
+    except pd.errors.ParserError as exc:
+        raise ValueError(
+            f"[receipt_api] Failed to parse receipts CSV at '{resolved_path}'. "
+            f"The file may contain malformed rows or unescaped delimiters. "
+            f"Original error: {exc}"
+        ) from exc
 
     # Strip surrounding whitespace from every string cell.
     df = df.apply(lambda col: col.str.strip() if col.dtype == object else col)
@@ -408,7 +420,12 @@ def save_receipts(
 
     os.makedirs(os.path.dirname(resolved_path), exist_ok=True)
 
-    receipts[RECEIPT_COLUMNS].to_csv(resolved_path, index=False)
+    receipts[RECEIPT_COLUMNS].to_csv(
+        resolved_path,
+        index=False,
+        quoting=csv.QUOTE_ALL,
+        escapechar="\\",
+    )
 
     print(f"[receipt_api] Receipts saved → {resolved_path}  ({len(receipts):,} rows)")
     return resolved_path

@@ -1305,3 +1305,13 @@ The goal was to move Aether from a campaign automation system toward an AI-nativ
 
 ### Consequences
 Aether can now personalize campaigns using behavioural context, lifecycle stage, engagement health, and inferred customer journeys without relying on paid LLM APIs.
+
+### Goal Parser Compatibility Bridge
+
+The Goal Parser occasionally emits exploratory classifications
+(e.g. MANUAL_REVIEW) for ambiguous business goals.
+
+To preserve end-to-end pipeline execution during demonstrations,
+these classifications are temporarily mapped to the closest
+supported execution strategy until a dedicated Strategy Engine
+is implemented.
