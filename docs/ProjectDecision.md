@@ -1285,3 +1285,23 @@ Needed explainable, deployable intelligence capable of prioritizing intervention
 
 Outcome:
 Aether can proactively identify customers requiring retention efforts and adapt campaign aggressiveness accordingly.
+
+## Decision: Re-open backend to improve AI nativeness
+
+### Context
+The original backend focused on audience selection and campaign execution. While functional, it lacked deeper behavioural reasoning.
+
+### Decision
+The backend was temporarily reopened to introduce:
+
+- Product Affinity Intelligence
+- Customer Health Scoring
+- CRM Lifecycle Intelligence
+- Story Intelligence
+- Personalized Campaign Generation
+
+### Rationale
+The goal was to move Aether from a campaign automation system toward an AI-native marketing intelligence platform while remaining fully deterministic and explainable.
+
+### Consequences
+Aether can now personalize campaigns using behavioural context, lifecycle stage, engagement health, and inferred customer journeys without relying on paid LLM APIs.
