@@ -1,0 +1,1102 @@
+{
+    "PROD00051": {
+        "product_name": "Multivitamin Women 60 Tablets",
+        "recommendations": [
+            {
+                "product_id": "PROD00070",
+                "product_name": "Lavender Pillow Mist 100ml",
+                "co_purchase_count": 247
+            },
+            {
+                "product_id": "PROD00054",
+                "product_name": "Vitamin D3 + K2 60 Tablets",
+                "co_purchase_count": 241
+            },
+            {
+                "product_id": "PROD00063",
+                "product_name": "Protein Granola Bars 6pk",
+                "co_purchase_count": 232
+            }
+        ]
+    },
+    "PROD00055": {
+        "product_name": "Probiotic 10B CFU 30 Capsules",
+        "recommendations": [
+            {
+                "product_id": "PROD00057",
+                "product_name": "Collagen Peptides Powder 200g",
+                "co_purchase_count": 240
+            },
+            {
+                "product_id": "PROD00056",
+                "product_name": "Iron + Folic Acid 60 Tablets",
+                "co_purchase_count": 240
+            },
+            {
+                "product_id": "PROD00060",
+                "product_name": "Turmeric Curcumin 500mg 60 Caps",
+                "co_purchase_count": 237
+            }
+        ]
+    },
+    "PROD00059": {
+        "product_name": "Triphala Churna 100g",
+        "recommendations": [
+            {
+                "product_id": "PROD00069",
+                "product_name": "Guided Mindfulness Journal",
+                "co_purchase_count": 246
+            },
+            {
+                "product_id": "PROD00056",
+                "product_name": "Iron + Folic Acid 60 Tablets",
+                "co_purchase_count": 231
+            },
+            {
+                "product_id": "PROD00062",
+                "product_name": "Giloy Tulsi Immunity Drops 30ml",
+                "co_purchase_count": 225
+            }
+        ]
+    },
+    "PROD00068": {
+        "product_name": "Resistance Bands Set 5-Level",
+        "recommendations": [
+            {
+                "product_id": "PROD00054",
+                "product_name": "Vitamin D3 + K2 60 Tablets",
+                "co_purchase_count": 227
+            },
+            {
+                "product_id": "PROD00057",
+                "product_name": "Collagen Peptides Powder 200g",
+                "co_purchase_count": 226
+            },
+            {
+                "product_id": "PROD00059",
+                "product_name": "Triphala Churna 100g",
+                "co_purchase_count": 224
+            }
+        ]
+    },
+    "PROD00057": {
+        "product_name": "Collagen Peptides Powder 200g",
+        "recommendations": [
+            {
+                "product_id": "PROD00060",
+                "product_name": "Turmeric Curcumin 500mg 60 Caps",
+                "co_purchase_count": 249
+            },
+            {
+                "product_id": "PROD00070",
+                "product_name": "Lavender Pillow Mist 100ml",
+                "co_purchase_count": 248
+            },
+            {
+                "product_id": "PROD00056",
+                "product_name": "Iron + Folic Acid 60 Tablets",
+                "co_purchase_count": 245
+            }
+        ]
+    },
+    "PROD00058": {
+        "product_name": "Ashwagandha KSM-66 60 Capsules",
+        "recommendations": [
+            {
+                "product_id": "PROD00054",
+                "product_name": "Vitamin D3 + K2 60 Tablets",
+                "co_purchase_count": 253
+            },
+            {
+                "product_id": "PROD00070",
+                "product_name": "Lavender Pillow Mist 100ml",
+                "co_purchase_count": 243
+            },
+            {
+                "product_id": "PROD00053",
+                "product_name": "Omega-3 Fish Oil 60 Softgels",
+                "co_purchase_count": 228
+            }
+        ]
+    },
+    "PROD00062": {
+        "product_name": "Giloy Tulsi Immunity Drops 30ml",
+        "recommendations": [
+            {
+                "product_id": "PROD00060",
+                "product_name": "Turmeric Curcumin 500mg 60 Caps",
+                "co_purchase_count": 230
+            },
+            {
+                "product_id": "PROD00070",
+                "product_name": "Lavender Pillow Mist 100ml",
+                "co_purchase_count": 229
+            },
+            {
+                "product_id": "PROD00056",
+                "product_name": "Iron + Folic Acid 60 Tablets",
+                "co_purchase_count": 227
+            }
+        ]
+    },
+    "PROD00063": {
+        "product_name": "Protein Granola Bars 6pk",
+        "recommendations": [
+            {
+                "product_id": "PROD00061",
+                "product_name": "Moringa Leaf Powder 100g",
+                "co_purchase_count": 242
+            },
+            {
+                "product_id": "PROD00052",
+                "product_name": "Multivitamin Men 60 Tablets",
+                "co_purchase_count": 233
+            },
+            {
+                "product_id": "PROD00057",
+                "product_name": "Collagen Peptides Powder 200g",
+                "co_purchase_count": 232
+            }
+        ]
+    },
+    "PROD00054": {
+        "product_name": "Vitamin D3 + K2 60 Tablets",
+        "recommendations": [
+            {
+                "product_id": "PROD00070",
+                "product_name": "Lavender Pillow Mist 100ml",
+                "co_purchase_count": 254
+            },
+            {
+                "product_id": "PROD00058",
+                "product_name": "Ashwagandha KSM-66 60 Capsules",
+                "co_purchase_count": 253
+            },
+            {
+                "product_id": "PROD00057",
+                "product_name": "Collagen Peptides Powder 200g",
+                "co_purchase_count": 242
+            }
+        ]
+    },
+    "PROD00061": {
+        "product_name": "Moringa Leaf Powder 100g",
+        "recommendations": [
+            {
+                "product_id": "PROD00069",
+                "product_name": "Guided Mindfulness Journal",
+                "co_purchase_count": 251
+            },
+            {
+                "product_id": "PROD00063",
+                "product_name": "Protein Granola Bars 6pk",
+                "co_purchase_count": 242
+            },
+            {
+                "product_id": "PROD00070",
+                "product_name": "Lavender Pillow Mist 100ml",
+                "co_purchase_count": 240
+            }
+        ]
+    },
+    "PROD00008": {
+        "product_name": "Baby Sunscreen SPF 50 100ml",
+        "recommendations": [
+            {
+                "product_id": "PROD00078",
+                "product_name": "Smoke & CO Detector Combo",
+                "co_purchase_count": 151
+            },
+            {
+                "product_id": "PROD00075",
+                "product_name": "Beeswax Wraps Set of 3",
+                "co_purchase_count": 149
+            },
+            {
+                "product_id": "PROD00071",
+                "product_name": "Plant-Based Multi-Surface Cleaner 500ml",
+                "co_purchase_count": 149
+            }
+        ]
+    },
+    "PROD00010": {
+        "product_name": "Organic Nappy Rash Balm 75g",
+        "recommendations": [
+            {
+                "product_id": "PROD00072",
+                "product_name": "Eco Laundry Liquid 1L",
+                "co_purchase_count": 165
+            },
+            {
+                "product_id": "PROD00077",
+                "product_name": "Child Safety Cabinet Locks 8pk",
+                "co_purchase_count": 163
+            },
+            {
+                "product_id": "PROD00079",
+                "product_name": "Reusable Grocery Bags Set 5pk",
+                "co_purchase_count": 161
+            }
+        ]
+    },
+    "PROD00056": {
+        "product_name": "Iron + Folic Acid 60 Tablets",
+        "recommendations": [
+            {
+                "product_id": "PROD00057",
+                "product_name": "Collagen Peptides Powder 200g",
+                "co_purchase_count": 245
+            },
+            {
+                "product_id": "PROD00052",
+                "product_name": "Multivitamin Men 60 Tablets",
+                "co_purchase_count": 240
+            },
+            {
+                "product_id": "PROD00055",
+                "product_name": "Probiotic 10B CFU 30 Capsules",
+                "co_purchase_count": 240
+            }
+        ]
+    },
+    "PROD00065": {
+        "product_name": "Raw Wildflower Honey 500g",
+        "recommendations": [
+            {
+                "product_id": "PROD00052",
+                "product_name": "Multivitamin Men 60 Tablets",
+                "co_purchase_count": 241
+            },
+            {
+                "product_id": "PROD00058",
+                "product_name": "Ashwagandha KSM-66 60 Capsules",
+                "co_purchase_count": 227
+            },
+            {
+                "product_id": "PROD00061",
+                "product_name": "Moringa Leaf Powder 100g",
+                "co_purchase_count": 226
+            }
+        ]
+    },
+    "PROD00072": {
+        "product_name": "Eco Laundry Liquid 1L",
+        "recommendations": [
+            {
+                "product_id": "PROD00078",
+                "product_name": "Smoke & CO Detector Combo",
+                "co_purchase_count": 542
+            },
+            {
+                "product_id": "PROD00077",
+                "product_name": "Child Safety Cabinet Locks 8pk",
+                "co_purchase_count": 528
+            },
+            {
+                "product_id": "PROD00079",
+                "product_name": "Reusable Grocery Bags Set 5pk",
+                "co_purchase_count": 523
+            }
+        ]
+    },
+    "PROD00074": {
+        "product_name": "Stainless Steel Water Bottle 750ml",
+        "recommendations": [
+            {
+                "product_id": "PROD00075",
+                "product_name": "Beeswax Wraps Set of 3",
+                "co_purchase_count": 536
+            },
+            {
+                "product_id": "PROD00077",
+                "product_name": "Child Safety Cabinet Locks 8pk",
+                "co_purchase_count": 522
+            },
+            {
+                "product_id": "PROD00072",
+                "product_name": "Eco Laundry Liquid 1L",
+                "co_purchase_count": 516
+            }
+        ]
+    },
+    "PROD00079": {
+        "product_name": "Reusable Grocery Bags Set 5pk",
+        "recommendations": [
+            {
+                "product_id": "PROD00078",
+                "product_name": "Smoke & CO Detector Combo",
+                "co_purchase_count": 561
+            },
+            {
+                "product_id": "PROD00073",
+                "product_name": "BPA-Free Food Storage Set 5pc",
+                "co_purchase_count": 547
+            },
+            {
+                "product_id": "PROD00077",
+                "product_name": "Child Safety Cabinet Locks 8pk",
+                "co_purchase_count": 546
+            }
+        ]
+    },
+    "PROD00066": {
+        "product_name": "Organic Chia Seeds 250g",
+        "recommendations": [
+            {
+                "product_id": "PROD00069",
+                "product_name": "Guided Mindfulness Journal",
+                "co_purchase_count": 226
+            },
+            {
+                "product_id": "PROD00052",
+                "product_name": "Multivitamin Men 60 Tablets",
+                "co_purchase_count": 223
+            },
+            {
+                "product_id": "PROD00055",
+                "product_name": "Probiotic 10B CFU 30 Capsules",
+                "co_purchase_count": 221
+            }
+        ]
+    },
+    "PROD00077": {
+        "product_name": "Child Safety Cabinet Locks 8pk",
+        "recommendations": [
+            {
+                "product_id": "PROD00079",
+                "product_name": "Reusable Grocery Bags Set 5pk",
+                "co_purchase_count": 546
+            },
+            {
+                "product_id": "PROD00071",
+                "product_name": "Plant-Based Multi-Surface Cleaner 500ml",
+                "co_purchase_count": 536
+            },
+            {
+                "product_id": "PROD00078",
+                "product_name": "Smoke & CO Detector Combo",
+                "co_purchase_count": 529
+            }
+        ]
+    },
+    "PROD00078": {
+        "product_name": "Smoke & CO Detector Combo",
+        "recommendations": [
+            {
+                "product_id": "PROD00079",
+                "product_name": "Reusable Grocery Bags Set 5pk",
+                "co_purchase_count": 561
+            },
+            {
+                "product_id": "PROD00072",
+                "product_name": "Eco Laundry Liquid 1L",
+                "co_purchase_count": 542
+            },
+            {
+                "product_id": "PROD00080",
+                "product_name": "Compostable Trash Bags 30ct",
+                "co_purchase_count": 534
+            }
+        ]
+    },
+    "PROD00067": {
+        "product_name": "Eco-Friendly Yoga Mat 6mm",
+        "recommendations": [
+            {
+                "product_id": "PROD00055",
+                "product_name": "Probiotic 10B CFU 30 Capsules",
+                "co_purchase_count": 236
+            },
+            {
+                "product_id": "PROD00069",
+                "product_name": "Guided Mindfulness Journal",
+                "co_purchase_count": 235
+            },
+            {
+                "product_id": "PROD00053",
+                "product_name": "Omega-3 Fish Oil 60 Softgels",
+                "co_purchase_count": 233
+            }
+        ]
+    },
+    "PROD00073": {
+        "product_name": "BPA-Free Food Storage Set 5pc",
+        "recommendations": [
+            {
+                "product_id": "PROD00079",
+                "product_name": "Reusable Grocery Bags Set 5pk",
+                "co_purchase_count": 547
+            },
+            {
+                "product_id": "PROD00075",
+                "product_name": "Beeswax Wraps Set of 3",
+                "co_purchase_count": 545
+            },
+            {
+                "product_id": "PROD00077",
+                "product_name": "Child Safety Cabinet Locks 8pk",
+                "co_purchase_count": 526
+            }
+        ]
+    },
+    "PROD00076": {
+        "product_name": "Family First Aid Kit 50pc",
+        "recommendations": [
+            {
+                "product_id": "PROD00072",
+                "product_name": "Eco Laundry Liquid 1L",
+                "co_purchase_count": 520
+            },
+            {
+                "product_id": "PROD00075",
+                "product_name": "Beeswax Wraps Set of 3",
+                "co_purchase_count": 514
+            },
+            {
+                "product_id": "PROD00074",
+                "product_name": "Stainless Steel Water Bottle 750ml",
+                "co_purchase_count": 512
+            }
+        ]
+    },
+    "PROD00005": {
+        "product_name": "Soft Baby Massage Oil 100ml",
+        "recommendations": [
+            {
+                "product_id": "PROD00076",
+                "product_name": "Family First Aid Kit 50pc",
+                "co_purchase_count": 164
+            },
+            {
+                "product_id": "PROD00075",
+                "product_name": "Beeswax Wraps Set of 3",
+                "co_purchase_count": 149
+            },
+            {
+                "product_id": "PROD00077",
+                "product_name": "Child Safety Cabinet Locks 8pk",
+                "co_purchase_count": 149
+            }
+        ]
+    },
+    "PROD00014": {
+        "product_name": "Sensitive Skin Diapers M 36ct",
+        "recommendations": [
+            {
+                "product_id": "PROD00072",
+                "product_name": "Eco Laundry Liquid 1L",
+                "co_purchase_count": 167
+            },
+            {
+                "product_id": "PROD00077",
+                "product_name": "Child Safety Cabinet Locks 8pk",
+                "co_purchase_count": 158
+            },
+            {
+                "product_id": "PROD00071",
+                "product_name": "Plant-Based Multi-Surface Cleaner 500ml",
+                "co_purchase_count": 154
+            }
+        ]
+    },
+    "PROD00016": {
+        "product_name": "Baby Feeding Bottle 150ml",
+        "recommendations": [
+            {
+                "product_id": "PROD00075",
+                "product_name": "Beeswax Wraps Set of 3",
+                "co_purchase_count": 143
+            },
+            {
+                "product_id": "PROD00073",
+                "product_name": "BPA-Free Food Storage Set 5pc",
+                "co_purchase_count": 140
+            },
+            {
+                "product_id": "PROD00076",
+                "product_name": "Family First Aid Kit 50pc",
+                "co_purchase_count": 136
+            }
+        ]
+    },
+    "PROD00024": {
+        "product_name": "Baby Nail Care Kit",
+        "recommendations": [
+            {
+                "product_id": "PROD00077",
+                "product_name": "Child Safety Cabinet Locks 8pk",
+                "co_purchase_count": 177
+            },
+            {
+                "product_id": "PROD00073",
+                "product_name": "BPA-Free Food Storage Set 5pc",
+                "co_purchase_count": 168
+            },
+            {
+                "product_id": "PROD00076",
+                "product_name": "Family First Aid Kit 50pc",
+                "co_purchase_count": 166
+            }
+        ]
+    },
+    "PROD00075": {
+        "product_name": "Beeswax Wraps Set of 3",
+        "recommendations": [
+            {
+                "product_id": "PROD00073",
+                "product_name": "BPA-Free Food Storage Set 5pc",
+                "co_purchase_count": 545
+            },
+            {
+                "product_id": "PROD00074",
+                "product_name": "Stainless Steel Water Bottle 750ml",
+                "co_purchase_count": 536
+            },
+            {
+                "product_id": "PROD00078",
+                "product_name": "Smoke & CO Detector Combo",
+                "co_purchase_count": 533
+            }
+        ]
+    },
+    "PROD00080": {
+        "product_name": "Compostable Trash Bags 30ct",
+        "recommendations": [
+            {
+                "product_id": "PROD00079",
+                "product_name": "Reusable Grocery Bags Set 5pk",
+                "co_purchase_count": 545
+            },
+            {
+                "product_id": "PROD00078",
+                "product_name": "Smoke & CO Detector Combo",
+                "co_purchase_count": 534
+            },
+            {
+                "product_id": "PROD00077",
+                "product_name": "Child Safety Cabinet Locks 8pk",
+                "co_purchase_count": 515
+            }
+        ]
+    },
+    "PROD00069": {
+        "product_name": "Guided Mindfulness Journal",
+        "recommendations": [
+            {
+                "product_id": "PROD00070",
+                "product_name": "Lavender Pillow Mist 100ml",
+                "co_purchase_count": 254
+            },
+            {
+                "product_id": "PROD00061",
+                "product_name": "Moringa Leaf Powder 100g",
+                "co_purchase_count": 251
+            },
+            {
+                "product_id": "PROD00059",
+                "product_name": "Triphala Churna 100g",
+                "co_purchase_count": 246
+            }
+        ]
+    },
+    "PROD00071": {
+        "product_name": "Plant-Based Multi-Surface Cleaner 500ml",
+        "recommendations": [
+            {
+                "product_id": "PROD00079",
+                "product_name": "Reusable Grocery Bags Set 5pk",
+                "co_purchase_count": 543
+            },
+            {
+                "product_id": "PROD00077",
+                "product_name": "Child Safety Cabinet Locks 8pk",
+                "co_purchase_count": 536
+            },
+            {
+                "product_id": "PROD00075",
+                "product_name": "Beeswax Wraps Set of 3",
+                "co_purchase_count": 528
+            }
+        ]
+    },
+    "PROD00060": {
+        "product_name": "Turmeric Curcumin 500mg 60 Caps",
+        "recommendations": [
+            {
+                "product_id": "PROD00057",
+                "product_name": "Collagen Peptides Powder 200g",
+                "co_purchase_count": 249
+            },
+            {
+                "product_id": "PROD00055",
+                "product_name": "Probiotic 10B CFU 30 Capsules",
+                "co_purchase_count": 237
+            },
+            {
+                "product_id": "PROD00056",
+                "product_name": "Iron + Folic Acid 60 Tablets",
+                "co_purchase_count": 231
+            }
+        ]
+    },
+    "PROD00064": {
+        "product_name": "Cold Pressed Coconut Oil 500ml",
+        "recommendations": [
+            {
+                "product_id": "PROD00052",
+                "product_name": "Multivitamin Men 60 Tablets",
+                "co_purchase_count": 236
+            },
+            {
+                "product_id": "PROD00055",
+                "product_name": "Probiotic 10B CFU 30 Capsules",
+                "co_purchase_count": 233
+            },
+            {
+                "product_id": "PROD00063",
+                "product_name": "Protein Granola Bars 6pk",
+                "co_purchase_count": 232
+            }
+        ]
+    },
+    "PROD00070": {
+        "product_name": "Lavender Pillow Mist 100ml",
+        "recommendations": [
+            {
+                "product_id": "PROD00054",
+                "product_name": "Vitamin D3 + K2 60 Tablets",
+                "co_purchase_count": 254
+            },
+            {
+                "product_id": "PROD00069",
+                "product_name": "Guided Mindfulness Journal",
+                "co_purchase_count": 254
+            },
+            {
+                "product_id": "PROD00057",
+                "product_name": "Collagen Peptides Powder 200g",
+                "co_purchase_count": 248
+            }
+        ]
+    },
+    "PROD00052": {
+        "product_name": "Multivitamin Men 60 Tablets",
+        "recommendations": [
+            {
+                "product_id": "PROD00057",
+                "product_name": "Collagen Peptides Powder 200g",
+                "co_purchase_count": 241
+            },
+            {
+                "product_id": "PROD00065",
+                "product_name": "Raw Wildflower Honey 500g",
+                "co_purchase_count": 241
+            },
+            {
+                "product_id": "PROD00056",
+                "product_name": "Iron + Folic Acid 60 Tablets",
+                "co_purchase_count": 240
+            }
+        ]
+    },
+    "PROD00003": {
+        "product_name": "Baby Bubble Bath Liquid 500ml",
+        "recommendations": [
+            {
+                "product_id": "PROD00071",
+                "product_name": "Plant-Based Multi-Surface Cleaner 500ml",
+                "co_purchase_count": 159
+            },
+            {
+                "product_id": "PROD00076",
+                "product_name": "Family First Aid Kit 50pc",
+                "co_purchase_count": 154
+            },
+            {
+                "product_id": "PROD00080",
+                "product_name": "Compostable Trash Bags 30ct",
+                "co_purchase_count": 146
+            }
+        ]
+    },
+    "PROD00006": {
+        "product_name": "Baby Moisturising Lotion 200ml",
+        "recommendations": [
+            {
+                "product_id": "PROD00072",
+                "product_name": "Eco Laundry Liquid 1L",
+                "co_purchase_count": 160
+            },
+            {
+                "product_id": "PROD00079",
+                "product_name": "Reusable Grocery Bags Set 5pk",
+                "co_purchase_count": 156
+            },
+            {
+                "product_id": "PROD00071",
+                "product_name": "Plant-Based Multi-Surface Cleaner 500ml",
+                "co_purchase_count": 154
+            }
+        ]
+    },
+    "PROD00023": {
+        "product_name": "Baby Digital Thermometer",
+        "recommendations": [
+            {
+                "product_id": "PROD00074",
+                "product_name": "Stainless Steel Water Bottle 750ml",
+                "co_purchase_count": 154
+            },
+            {
+                "product_id": "PROD00072",
+                "product_name": "Eco Laundry Liquid 1L",
+                "co_purchase_count": 152
+            },
+            {
+                "product_id": "PROD00075",
+                "product_name": "Beeswax Wraps Set of 3",
+                "co_purchase_count": 151
+            }
+        ]
+    },
+    "PROD00053": {
+        "product_name": "Omega-3 Fish Oil 60 Softgels",
+        "recommendations": [
+            {
+                "product_id": "PROD00067",
+                "product_name": "Eco-Friendly Yoga Mat 6mm",
+                "co_purchase_count": 233
+            },
+            {
+                "product_id": "PROD00061",
+                "product_name": "Moringa Leaf Powder 100g",
+                "co_purchase_count": 229
+            },
+            {
+                "product_id": "PROD00057",
+                "product_name": "Collagen Peptides Powder 200g",
+                "co_purchase_count": 228
+            }
+        ]
+    },
+    "PROD00013": {
+        "product_name": "Sensitive Skin Diapers S 40ct",
+        "recommendations": [
+            {
+                "product_id": "PROD00072",
+                "product_name": "Eco Laundry Liquid 1L",
+                "co_purchase_count": 157
+            },
+            {
+                "product_id": "PROD00077",
+                "product_name": "Child Safety Cabinet Locks 8pk",
+                "co_purchase_count": 149
+            },
+            {
+                "product_id": "PROD00073",
+                "product_name": "BPA-Free Food Storage Set 5pc",
+                "co_purchase_count": 145
+            }
+        ]
+    },
+    "PROD00002": {
+        "product_name": "Tear-Free Baby Wash 400ml",
+        "recommendations": [
+            {
+                "product_id": "PROD00078",
+                "product_name": "Smoke & CO Detector Combo",
+                "co_purchase_count": 176
+            },
+            {
+                "product_id": "PROD00076",
+                "product_name": "Family First Aid Kit 50pc",
+                "co_purchase_count": 158
+            },
+            {
+                "product_id": "PROD00077",
+                "product_name": "Child Safety Cabinet Locks 8pk",
+                "co_purchase_count": 156
+            }
+        ]
+    },
+    "PROD00018": {
+        "product_name": "Silicone Baby Spoon Set",
+        "recommendations": [
+            {
+                "product_id": "PROD00075",
+                "product_name": "Beeswax Wraps Set of 3",
+                "co_purchase_count": 162
+            },
+            {
+                "product_id": "PROD00077",
+                "product_name": "Child Safety Cabinet Locks 8pk",
+                "co_purchase_count": 158
+            },
+            {
+                "product_id": "PROD00080",
+                "product_name": "Compostable Trash Bags 30ct",
+                "co_purchase_count": 144
+            }
+        ]
+    },
+    "PROD00001": {
+        "product_name": "Gentle Baby Shampoo 200ml",
+        "recommendations": [
+            {
+                "product_id": "PROD00074",
+                "product_name": "Stainless Steel Water Bottle 750ml",
+                "co_purchase_count": 169
+            },
+            {
+                "product_id": "PROD00078",
+                "product_name": "Smoke & CO Detector Combo",
+                "co_purchase_count": 168
+            },
+            {
+                "product_id": "PROD00071",
+                "product_name": "Plant-Based Multi-Surface Cleaner 500ml",
+                "co_purchase_count": 167
+            }
+        ]
+    },
+    "PROD00025": {
+        "product_name": "Baby Mosquito Repellent Patch 24ct",
+        "recommendations": [
+            {
+                "product_id": "PROD00072",
+                "product_name": "Eco Laundry Liquid 1L",
+                "co_purchase_count": 173
+            },
+            {
+                "product_id": "PROD00079",
+                "product_name": "Reusable Grocery Bags Set 5pk",
+                "co_purchase_count": 168
+            },
+            {
+                "product_id": "PROD00071",
+                "product_name": "Plant-Based Multi-Surface Cleaner 500ml",
+                "co_purchase_count": 166
+            }
+        ]
+    },
+    "PROD00011": {
+        "product_name": "Baby Hair & Scalp Oil 50ml",
+        "recommendations": [
+            {
+                "product_id": "PROD00078",
+                "product_name": "Smoke & CO Detector Combo",
+                "co_purchase_count": 159
+            },
+            {
+                "product_id": "PROD00071",
+                "product_name": "Plant-Based Multi-Surface Cleaner 500ml",
+                "co_purchase_count": 157
+            },
+            {
+                "product_id": "PROD00072",
+                "product_name": "Eco Laundry Liquid 1L",
+                "co_purchase_count": 156
+            }
+        ]
+    },
+    "PROD00020": {
+        "product_name": "Breast Milk Storage Bags 25ct",
+        "recommendations": [
+            {
+                "product_id": "PROD00076",
+                "product_name": "Family First Aid Kit 50pc",
+                "co_purchase_count": 160
+            },
+            {
+                "product_id": "PROD00078",
+                "product_name": "Smoke & CO Detector Combo",
+                "co_purchase_count": 157
+            },
+            {
+                "product_id": "PROD00075",
+                "product_name": "Beeswax Wraps Set of 3",
+                "co_purchase_count": 153
+            }
+        ]
+    },
+    "PROD00022": {
+        "product_name": "Infant Gripe Water 100ml",
+        "recommendations": [
+            {
+                "product_id": "PROD00077",
+                "product_name": "Child Safety Cabinet Locks 8pk",
+                "co_purchase_count": 155
+            },
+            {
+                "product_id": "PROD00072",
+                "product_name": "Eco Laundry Liquid 1L",
+                "co_purchase_count": 153
+            },
+            {
+                "product_id": "PROD00074",
+                "product_name": "Stainless Steel Water Bottle 750ml",
+                "co_purchase_count": 143
+            }
+        ]
+    },
+    "PROD00021": {
+        "product_name": "Baby Nasal Saline Drops 15ml",
+        "recommendations": [
+            {
+                "product_id": "PROD00077",
+                "product_name": "Child Safety Cabinet Locks 8pk",
+                "co_purchase_count": 161
+            },
+            {
+                "product_id": "PROD00075",
+                "product_name": "Beeswax Wraps Set of 3",
+                "co_purchase_count": 156
+            },
+            {
+                "product_id": "PROD00074",
+                "product_name": "Stainless Steel Water Bottle 750ml",
+                "co_purchase_count": 150
+            }
+        ]
+    },
+    "PROD00017": {
+        "product_name": "Anti-Colic Feeding Bottle 250ml",
+        "recommendations": [
+            {
+                "product_id": "PROD00077",
+                "product_name": "Child Safety Cabinet Locks 8pk",
+                "co_purchase_count": 170
+            },
+            {
+                "product_id": "PROD00073",
+                "product_name": "BPA-Free Food Storage Set 5pc",
+                "co_purchase_count": 170
+            },
+            {
+                "product_id": "PROD00079",
+                "product_name": "Reusable Grocery Bags Set 5pk",
+                "co_purchase_count": 165
+            }
+        ]
+    },
+    "PROD00012": {
+        "product_name": "Biodegradable Baby Wipes 80ct",
+        "recommendations": [
+            {
+                "product_id": "PROD00077",
+                "product_name": "Child Safety Cabinet Locks 8pk",
+                "co_purchase_count": 175
+            },
+            {
+                "product_id": "PROD00072",
+                "product_name": "Eco Laundry Liquid 1L",
+                "co_purchase_count": 166
+            },
+            {
+                "product_id": "PROD00073",
+                "product_name": "BPA-Free Food Storage Set 5pc",
+                "co_purchase_count": 165
+            }
+        ]
+    },
+    "PROD00009": {
+        "product_name": "Baby Talc-Free Powder 200g",
+        "recommendations": [
+            {
+                "product_id": "PROD00076",
+                "product_name": "Family First Aid Kit 50pc",
+                "co_purchase_count": 165
+            },
+            {
+                "product_id": "PROD00078",
+                "product_name": "Smoke & CO Detector Combo",
+                "co_purchase_count": 165
+            },
+            {
+                "product_id": "PROD00075",
+                "product_name": "Beeswax Wraps Set of 3",
+                "co_purchase_count": 162
+            }
+        ]
+    },
+    "PROD00004": {
+        "product_name": "Organic Cotton Baby Towel",
+        "recommendations": [
+            {
+                "product_id": "PROD00077",
+                "product_name": "Child Safety Cabinet Locks 8pk",
+                "co_purchase_count": 156
+            },
+            {
+                "product_id": "PROD00079",
+                "product_name": "Reusable Grocery Bags Set 5pk",
+                "co_purchase_count": 152
+            },
+            {
+                "product_id": "PROD00078",
+                "product_name": "Smoke & CO Detector Combo",
+                "co_purchase_count": 148
+            }
+        ]
+    },
+    "PROD00015": {
+        "product_name": "Sensitive Skin Diapers L 32ct",
+        "recommendations": [
+            {
+                "product_id": "PROD00078",
+                "product_name": "Smoke & CO Detector Combo",
+                "co_purchase_count": 171
+            },
+            {
+                "product_id": "PROD00072",
+                "product_name": "Eco Laundry Liquid 1L",
+                "co_purchase_count": 158
+            },
+            {
+                "product_id": "PROD00071",
+                "product_name": "Plant-Based Multi-Surface Cleaner 500ml",
+                "co_purchase_count": 155
+            }
+        ]
+    },
+    "PROD00019": {
+        "product_name": "Baby Food Masher & Bowl",
+        "recommendations": [
+            {
+                "product_id": "PROD00074",
+                "product_name": "Stainless Steel Water Bottle 750ml",
+                "co_purchase_count": 156
+            },
+            {
+                "product_id": "PROD00075",
+                "product_name": "Beeswax Wraps Set of 3",
+                "co_purchase_count": 156
+            },
+            {
+                "product_id": "PROD00072",
+                "product_name": "Eco Laundry Liquid 1L",
+                "co_purchase_count": 148
+            }
+        ]
+    },
+    "PROD00007": {
+        "product_name": "Nappy Rash Cream 50g",
+        "recommendations": [
+            {
+                "product_id": "PROD00077",
+                "product_name": "Child Safety Cabinet Locks 8pk",
+                "co_purchase_count": 167
+            },
+            {
+                "product_id": "PROD00072",
+                "product_name": "Eco Laundry Liquid 1L",
+                "co_purchase_count": 151
+            },
+            {
+                "product_id": "PROD00080",
+                "product_name": "Compostable Trash Bags 30ct",
+                "co_purchase_count": 151
+            }
+        ]
+    }
+}

@@ -1157,3 +1157,131 @@ The Backend V1 implementation passed deterministic validation across the primary
 
 Decision:
 Backend V1 is considered complete for the Xeno evaluation scope. Future effort should prioritize presentation quality, frontend implementation, deployment, and interview preparation rather than backend redesign.
+
+## Product Affinity Engine
+
+### Decision
+
+Implemented affinity-based recommendations using historical co-purchases.
+
+### Alternatives Considered
+
+- Collaborative Filtering
+- Matrix Factorization
+
+### Why
+
+
+Affinity analysis provides explainable recommendations with minimal computational overhead and aligns with the project's goal of delivering actionable marketing intelligence without requiring external ML infrastructure.
+
+---
+
+# Backend Reopening Decision (V2 Intelligence Expansion)
+
+Date: 2026-06-11
+
+Status: ACCEPTED
+
+## Context
+
+Backend V1 had previously been declared feature complete for the Xeno evaluation scope. Subsequent analysis of the generated customer and order datasets revealed an opportunity to significantly strengthen Aether's AI-native positioning without compromising its core architectural principles.
+
+The existing datasets already contained sufficient behavioural information to support higher-order marketing intelligence capabilities.
+
+## Decision
+
+The backend freeze is partially lifted for a tightly scoped Intelligence Expansion Sprint.
+
+Only intelligence-enhancing additions are permitted.
+
+The existing execution pipeline remains architecturally locked:
+
+Goal Parser
+→ Audience Selector
+→ Campaign Planner
+→ Communication Manager
+→ Channel Service
+→ Receipt API
+→ Insights Engine
+
+## Permitted Enhancements
+
+- Product affinity modelling using historical co-purchases.
+- Churn risk refinement using behavioural purchase signals.
+- Customer health scoring.
+- Goal-aligned campaign recommendation improvements.
+- Explainable next-best-action intelligence.
+
+## Non-Permitted Changes
+
+- Replacing deterministic systems with opaque models.
+- Introducing mandatory paid AI APIs.
+- Re-architecting the execution pipeline.
+- Migrating business logic into framework layers.
+- Expanding scope beyond evaluation constraints.
+
+## Rationale
+
+These enhancements strengthen Aether's ability to behave as an intelligent marketing agent rather than a campaign automation system.
+
+The decision preserves:
+
+- Free-tier deployability.
+- Deterministic behaviour.
+- Explainability.
+- Reproducibility.
+- Existing backend investments.
+
+while increasing the system's ability to:
+
+- predict risk,
+- recommend products,
+- identify opportunities,
+- and proactively guide marketers toward effective actions.
+
+## Strategic Principle
+
+Aether should not pursue AI for appearance alone.
+
+Intelligence should be introduced only when it improves marketer decision quality while remaining explainable, affordable, and demonstrably useful.
+
+## Outcome
+
+Backend V2 development focuses on increasing AI nativeness through behavioural intelligence rather than through dependence on external generative services.
+
+This decision represents an evolution of Aether's original philosophy rather than a departure from it.
+
+Decision:
+Product intelligence was introduced as an independent intelligence generator rather than extending customer intelligence directly.
+
+Rationale:
+Product affinity represents relationships between products rather than attributes of customers. Separating these concerns preserves modularity and allows future intelligence generators to evolve independently.
+
+Product affinity recommendations were enhanced with human-readable metadata because intelligence must be interpretable by marketers, not only machines.
+
+### Product Affinity Explainability
+
+Status: ACCEPTED
+
+Affinity recommendations should include human-readable product metadata rather than exposing only identifiers.
+
+Reason:
+Marketing teams act on products, not IDs. Recommendations must remain understandable to non-technical stakeholders.
+
+Outcome:
+Product affinity exports include both product identifiers and product names for the source and recommended products.
+
+## Customer Health Engine
+
+Decision:
+Implement heuristic customer health scoring.
+
+Alternatives Considered:
+- Survival models
+- XGBoost churn prediction
+
+Why:
+Needed explainable, deployable intelligence capable of prioritizing interventions without introducing opaque ML dependencies.
+
+Outcome:
+Aether can proactively identify customers requiring retention efforts and adapt campaign aggressiveness accordingly.
