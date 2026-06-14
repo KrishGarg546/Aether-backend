@@ -78,6 +78,7 @@ Insights Engine
 
 from __future__ import annotations
 
+import json
 import sys
 import traceback
 from pathlib import Path
@@ -218,7 +219,7 @@ BASE_DIR = Path(__file__).resolve().parent
 DATA_DIR = BASE_DIR / "data_generation" / "data"
 
 
-def load_intelligence_assets() -> dict[str, pd.DataFrame | None]:
+def load_intelligence_assets() -> dict[str, Any]:
     """Load precomputed intelligence assets.
 
     These assets are generated offline and consumed during campaign
@@ -228,13 +229,24 @@ def load_intelligence_assets() -> dict[str, pd.DataFrame | None]:
         "customer_health": DATA_DIR / "customer_health.csv",
         "customer_stories": DATA_DIR / "customer_stories.csv",
         "personalized_campaigns": DATA_DIR / "personalized_campaigns.csv",
+        "product_affinity": DATA_DIR / "product_affinity.json",
     }
 
-    loaded_assets: dict[str, pd.DataFrame | None] = {}
+    loaded_assets: dict[str, Any] = {}
 
     for name, path in assets.items():
         try:
-            loaded_assets[name] = pd.read_csv(path)
+            if path.suffix == ".csv":
+                df = pd.read_csv(path)
+
+                if name == "customer_health":
+                    loaded_assets[name] = df.to_dict(orient="records")
+                else:
+                    loaded_assets[name] = df
+
+            elif path.suffix == ".json":
+                with open(path, "r") as f:
+                    loaded_assets[name] = json.load(f)
         except Exception:
             loaded_assets[name] = None
 
@@ -246,7 +258,11 @@ def load_intelligence_assets() -> dict[str, pd.DataFrame | None]:
 # ---------------------------------------------------------------------------
 
 
-def run_pipeline(goal: str | None = None) -> dict[str, Any]:
+def run_pipeline(
+    goal: str | None = None,
+    audience_strategy: str = "AUTO",
+    audience_size: int | None = None,
+) -> dict[str, Any]:
     """
     Orchestrate the complete Aether execution pipeline for a marketer goal.
 
@@ -392,7 +408,14 @@ def run_pipeline(goal: str | None = None) -> dict[str, Any]:
         print("[aether] WARNING – Audience Selector module is unavailable.", file=sys.stderr)
     else:
         try:
-            audience = select_audience(parsed_goal)
+            audience = select_audience(
+                parsed_goal,
+                max_customers=(
+                    audience_size
+                    if audience_strategy == "CUSTOM"
+                    else None
+                ),
+            )
             stage_status["Audience Selector"] = "OK"
         except Exception as exc:
             stage_status["Audience Selector"] = f"ERROR: {exc}"
@@ -596,6 +619,8 @@ def run_pipeline(goal: str | None = None) -> dict[str, Any]:
     # ──────────────────────────────────────────────────────────────────────────
     return {
         "goal":           normalized_goal,
+        "audience_strategy": audience_strategy,
+        "requested_audience_size": audience_size,
         "parsed_goal":    parsed_goal,
         "audience":       audience,
         "campaign":       campaign,
@@ -626,20 +651,83 @@ def build_api_response(results: dict[str, Any]) -> dict[str, Any]:
     insights = results.get("insights") or {}
     intelligence_assets = results.get("intelligence_assets") or {}
 
+    product_affinity = intelligence_assets.get("product_affinity") or {}
+
+    customer_health = intelligence_assets.get("customer_health") or []
+
+    customer_health_summary = {
+        "champion": 0,
+        "loyal": 0,
+        "engaged": 0,
+        "at_risk": 0,
+        "dormant": 0,
+    }
+
+    for customer in customer_health:
+        segment = (
+            str(customer.get("health_status", ""))
+            .lower()
+            .replace(" ", "_")
+        )
+
+        if segment in customer_health_summary:
+            customer_health_summary[segment] += 1
+
+    product_affinity_preview = []
+    for product, related in list(product_affinity.items())[:5]:
+        product_affinity_preview.append(
+            {
+                "product": product,
+                "related_products": related,
+            }
+        )
+
     receipt_count = 0
     if isinstance(receipts, pd.DataFrame):
         receipt_count = len(receipts)
 
     recommendations: list[str] = insights.get("recommendations", [])
 
+    campaign_metrics = insights.get("campaign_metrics", {})
+
+    delivery_rate = float(campaign_metrics.get("delivery_rate", 0.0))
+    open_rate = float(campaign_metrics.get("open_rate", 0.0))
+    click_rate = float(campaign_metrics.get("click_rate", 0.0))
+    failure_rate = float(campaign_metrics.get("failure_rate", 0.0))
+
+    print(
+        "[AETHER API RESPONSE]",
+        {
+            "audience_size": audience.get("audience_size"),
+            "customer_count": audience.get("customer_count"),
+            "channels": campaign.get("recommended_channels", []),
+            "communications": len(communications),
+        },
+    )
     return {
         "goal": results.get("goal"),
         "objective": parsed_goal.get("campaign_objective"),
-        "audience_size": audience.get("audience_size"),
+        "audience_size": int(
+            audience.get("audience_size")
+            or audience.get("customer_count")
+            or 0
+        ),
+        "cohort_size": int(
+            audience.get("audience_size")
+            or audience.get("customer_count")
+            or 0
+        ),
         "campaign_name": campaign.get("campaign_name"),
+        "channels": campaign.get("recommended_channels", []),
         "communications_generated": len(communications),
         "receipt_events_processed": receipt_count,
+        "delivery_rate": round(delivery_rate, 1),
+        "open_rate": round(open_rate, 1),
+        "click_rate": round(click_rate, 1),
+        "failure_rate": round(failure_rate, 1),
         "recommendations": recommendations,
+        "product_affinity": product_affinity_preview,
+        "customer_health": customer_health_summary,
         "intelligence_assets_loaded": {
             key: value is not None
             for key, value in intelligence_assets.items()

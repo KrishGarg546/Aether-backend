@@ -308,7 +308,7 @@ def _validate_output(
 
 def select_audience(
     parsed_goal: dict[str, Any],
-    max_customers: int = 500,
+    max_customers: int | None = None,
     data_path: str | None = None,
 ) -> dict[str, Any]:
     """Select the best-fit audience for a parsed marketing goal.
@@ -360,7 +360,7 @@ def select_audience(
         If internal output-contract invariants are violated (indicates a
         logic bug).
     """
-    if max_customers < 1:
+    if max_customers is not None and max_customers < 1:
         raise ValueError(f"max_customers must be ≥ 1, got {max_customers}.")
 
     goal_type: str = parsed_goal.get("goal_type", "UNKNOWN")
@@ -396,6 +396,20 @@ def select_audience(
     goal_filtered: pd.DataFrame
     base_reason: str
     goal_filtered, base_reason = _apply_goal_filter(working_df, goal_type)
+    print(
+        f"[audience_selector] "
+        f"{goal_type}: "
+        f"{len(goal_filtered)} eligible customers "
+        f"before cap ({max_customers})"
+    )
+    if max_customers is None:
+        if parsed_goal.get("target_segment", "ALL_CUSTOMERS") == "ALL_CUSTOMERS":
+            max_customers = determine_audience_size(
+                goal_type=goal_type,
+                eligible_count=len(goal_filtered),
+            )
+        else:
+            max_customers = min(500, len(goal_filtered))
 
     # 4. Sort by campaign priority.
     sorted_df: pd.DataFrame = _sort_by_priority(goal_filtered)
@@ -465,6 +479,24 @@ def select_audience(
     _validate_output(result, intelligence_df, max_customers)
 
     return result
+
+def determine_audience_size(
+    goal_type: str,
+    eligible_count: int,
+) -> int:
+
+    defaults = {
+        "REACTIVATION": 600,
+        "RETENTION": 450,
+        "UPSELL": 250,
+        "CROSS_SELL": 350,
+        "LOYALTY": 150,
+    }
+
+    return min(
+        defaults.get(goal_type.upper(), 300),
+        eligible_count,
+    )
 
 def save_audience(
     audience_df: pd.DataFrame,
@@ -613,13 +645,13 @@ def main() -> None:
         try:
             result: dict[str, Any] = select_audience(
                 parsed_goal=goal,
-                max_customers=500,
+                max_customers=None,
             )
             print_summary(result)
             print(
-    f"Saved audience with "
-    f"{result['audience_size']} customers."
-)
+                f"Saved audience with "
+                f"{result['audience_size']} customers."
+            )
         except (FileNotFoundError, ValueError, AssertionError) as exc:
             print(f"  ERROR: {exc}", file=sys.stderr)
 

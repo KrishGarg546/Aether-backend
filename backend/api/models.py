@@ -39,6 +39,10 @@ class CampaignExecution(models.Model):
     receipt_events_processed = models.IntegerField(default=0)
 
     recommendations = models.JSONField(default=list)
+    raw_result = models.JSONField(
+        default=dict,
+        blank=True,
+    )
 
     created_at = models.DateTimeField(auto_now_add=True)
 

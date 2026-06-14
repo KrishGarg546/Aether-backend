@@ -1,5 +1,3 @@
-
-
 """Generate explainable customer health scores.
 
 This module evaluates customer purchasing behaviour and produces a
@@ -70,11 +68,13 @@ def generate_customer_health():
         if days <= 30:
             score += 30
         elif days <= 60:
-            score += 20
+            score += 15
         elif days <= 90:
-            score += 10
-        else:
+            score += 5
+        elif days <= 120:
             score -= 10
+        else:
+            score -= 25
 
         if row["total_orders"] >= 12:
             score += 15
@@ -94,13 +94,15 @@ def generate_customer_health():
     )
 
     def determine_health_status(score):
-        if score >= 80:
+        if score >= 90:
             return "CHAMPION"
-        if score >= 60:
+        if score >= 75:
             return "LOYAL"
-        if score >= 40:
+        if score >= 60:
+            return "ENGAGED"
+        if score >= 35:
             return "AT_RISK"
-        return "CRITICAL"
+        return "DORMANT"
 
     health_df["health_status"] = health_df[
         "health_score"
@@ -115,6 +117,11 @@ def generate_customer_health():
         if row["health_status"] == "LOYAL":
             return (
                 "Healthy relationship with minor signs of disengagement."
+            )
+
+        if row["health_status"] == "ENGAGED":
+            return (
+                "Moderately healthy customer with opportunities to strengthen loyalty."
             )
 
         if row["health_status"] == "AT_RISK":
@@ -150,6 +157,9 @@ def generate_customer_health():
 
         if health == "LOYAL":
             return "LOYAL"
+
+        if health == "ENGAGED":
+            return "ACTIVE"
 
         return "ACTIVE"
 

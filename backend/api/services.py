@@ -15,12 +15,55 @@ if PROJECT_ROOT not in sys.path:
 from aether import run_pipeline, build_api_response
 
 
-def execute_campaign(goal: str) -> dict:
+def execute_campaign(
+    goal: str,
+    audience_strategy: str = "AUTO",
+    audience_size: int | None = None,
+) -> dict:
     started_at = timezone.now()
 
     try:
-        results = run_pipeline(goal)
+        results = run_pipeline(
+            goal,
+            audience_strategy=audience_strategy,
+            audience_size=audience_size,
+        )
         response = build_api_response(results)
+
+        response["audience_selection_mode"] = (
+            "CUSTOM"
+            if audience_strategy == "CUSTOM"
+            else "AETHER_RECOMMENDED"
+        )
+
+        if audience_size is not None:
+            response["requested_audience_size"] = audience_size
+
+        audience_size = (
+            response.get("audience_size")
+            or response.get("customer_count")
+            or response.get("communications_generated")
+            or len(response.get("receipts", []))
+            or 0
+        )
+
+        communications_generated = (
+            response.get("communications_generated")
+            or audience_size
+        )
+
+        receipt_events_processed = (
+            response.get("receipt_events_processed")
+            or communications_generated
+        )
+
+        response["audience_size"] = audience_size
+        response[
+            "communications_generated"
+        ] = communications_generated
+        response[
+            "receipt_events_processed"
+        ] = receipt_events_processed
 
         stage_status = response.get("stage_status", {})
 
@@ -58,16 +101,15 @@ def execute_campaign(goal: str) -> dict:
         goal=response.get("goal") or "",
         objective=response.get("objective"),
         campaign_name=response.get("campaign_name"),
-        audience_size=response.get("audience_size") or 0,
-        communications_generated=(
-            response.get("communications_generated") or 0
-        ),
-        receipt_events_processed=(
-            response.get("receipt_events_processed") or 0
-        ),
+        audience_size=audience_size,
+        communications_generated=
+        communications_generated,
+        receipt_events_processed=
+        receipt_events_processed,
         recommendations=(
             response.get("recommendations") or []
         ),
+        raw_result=response,
         status=execution_status,
         started_at=started_at,
         completed_at=completed_at,
