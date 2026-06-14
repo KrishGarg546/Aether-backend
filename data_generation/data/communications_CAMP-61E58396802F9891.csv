@@ -1,0 +1,6 @@
+"communication_id","campaign_id","customer_id","channel","campaign_type","message","status","retry_count","created_at"
+"COMM-940C14FA71D76D419238","CAMP-61E58396802F9891","CUST00004","WHATSAPP","REWARDS","Celebrate loyalty with exclusive benefits. Offer: Loyalty Reward","CREATED","0","2026-06-14T00:05:44Z"
+"COMM-D4744C211D838610BF60","CAMP-61E58396802F9891","CUST06840","WHATSAPP","REWARDS","Celebrate loyalty with exclusive benefits. Offer: Loyalty Reward","CREATED","0","2026-06-14T00:05:44Z"
+"COMM-66CE8AF0B4BA1E06605F","CAMP-61E58396802F9891","CUST06837","WHATSAPP","REWARDS","Celebrate loyalty with exclusive benefits. Offer: Loyalty Reward","CREATED","0","2026-06-14T00:05:44Z"
+"COMM-07035A71685BC0955741","CAMP-61E58396802F9891","CUST06836","WHATSAPP","REWARDS","Celebrate loyalty with exclusive benefits. Offer: Loyalty Reward","CREATED","0","2026-06-14T00:05:44Z"
+"COMM-63FA6FC13C647581B267","CAMP-61E58396802F9891","CUST06833","WHATSAPP","REWARDS","Celebrate loyalty with exclusive benefits. Offer: Loyalty Reward","CREATED","0","2026-06-14T00:05:44Z"

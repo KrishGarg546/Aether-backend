@@ -1,0 +1,166 @@
+product_id,product_name,recommended_product_id,recommended_product_name,co_purchase_count
+PROD00051,Multivitamin Women 60 Tablets,PROD00070,Lavender Pillow Mist 100ml,247
+PROD00051,Multivitamin Women 60 Tablets,PROD00054,Vitamin D3 + K2 60 Tablets,241
+PROD00051,Multivitamin Women 60 Tablets,PROD00063,Protein Granola Bars 6pk,232
+PROD00055,Probiotic 10B CFU 30 Capsules,PROD00057,Collagen Peptides Powder 200g,240
+PROD00055,Probiotic 10B CFU 30 Capsules,PROD00056,Iron + Folic Acid 60 Tablets,240
+PROD00055,Probiotic 10B CFU 30 Capsules,PROD00060,Turmeric Curcumin 500mg 60 Caps,237
+PROD00059,Triphala Churna 100g,PROD00069,Guided Mindfulness Journal,246
+PROD00059,Triphala Churna 100g,PROD00056,Iron + Folic Acid 60 Tablets,231
+PROD00059,Triphala Churna 100g,PROD00062,Giloy Tulsi Immunity Drops 30ml,225
+PROD00068,Resistance Bands Set 5-Level,PROD00054,Vitamin D3 + K2 60 Tablets,227
+PROD00068,Resistance Bands Set 5-Level,PROD00057,Collagen Peptides Powder 200g,226
+PROD00068,Resistance Bands Set 5-Level,PROD00059,Triphala Churna 100g,224
+PROD00057,Collagen Peptides Powder 200g,PROD00060,Turmeric Curcumin 500mg 60 Caps,249
+PROD00057,Collagen Peptides Powder 200g,PROD00070,Lavender Pillow Mist 100ml,248
+PROD00057,Collagen Peptides Powder 200g,PROD00056,Iron + Folic Acid 60 Tablets,245
+PROD00058,Ashwagandha KSM-66 60 Capsules,PROD00054,Vitamin D3 + K2 60 Tablets,253
+PROD00058,Ashwagandha KSM-66 60 Capsules,PROD00070,Lavender Pillow Mist 100ml,243
+PROD00058,Ashwagandha KSM-66 60 Capsules,PROD00053,Omega-3 Fish Oil 60 Softgels,228
+PROD00062,Giloy Tulsi Immunity Drops 30ml,PROD00060,Turmeric Curcumin 500mg 60 Caps,230
+PROD00062,Giloy Tulsi Immunity Drops 30ml,PROD00070,Lavender Pillow Mist 100ml,229
+PROD00062,Giloy Tulsi Immunity Drops 30ml,PROD00056,Iron + Folic Acid 60 Tablets,227
+PROD00063,Protein Granola Bars 6pk,PROD00061,Moringa Leaf Powder 100g,242
+PROD00063,Protein Granola Bars 6pk,PROD00052,Multivitamin Men 60 Tablets,233
+PROD00063,Protein Granola Bars 6pk,PROD00057,Collagen Peptides Powder 200g,232
+PROD00054,Vitamin D3 + K2 60 Tablets,PROD00070,Lavender Pillow Mist 100ml,254
+PROD00054,Vitamin D3 + K2 60 Tablets,PROD00058,Ashwagandha KSM-66 60 Capsules,253
+PROD00054,Vitamin D3 + K2 60 Tablets,PROD00057,Collagen Peptides Powder 200g,242
+PROD00061,Moringa Leaf Powder 100g,PROD00069,Guided Mindfulness Journal,251
+PROD00061,Moringa Leaf Powder 100g,PROD00063,Protein Granola Bars 6pk,242
+PROD00061,Moringa Leaf Powder 100g,PROD00070,Lavender Pillow Mist 100ml,240
+PROD00008,Baby Sunscreen SPF 50 100ml,PROD00078,Smoke & CO Detector Combo,151
+PROD00008,Baby Sunscreen SPF 50 100ml,PROD00075,Beeswax Wraps Set of 3,149
+PROD00008,Baby Sunscreen SPF 50 100ml,PROD00071,Plant-Based Multi-Surface Cleaner 500ml,149
+PROD00010,Organic Nappy Rash Balm 75g,PROD00072,Eco Laundry Liquid 1L,165
+PROD00010,Organic Nappy Rash Balm 75g,PROD00077,Child Safety Cabinet Locks 8pk,163
+PROD00010,Organic Nappy Rash Balm 75g,PROD00079,Reusable Grocery Bags Set 5pk,161
+PROD00056,Iron + Folic Acid 60 Tablets,PROD00057,Collagen Peptides Powder 200g,245
+PROD00056,Iron + Folic Acid 60 Tablets,PROD00052,Multivitamin Men 60 Tablets,240
+PROD00056,Iron + Folic Acid 60 Tablets,PROD00055,Probiotic 10B CFU 30 Capsules,240
+PROD00065,Raw Wildflower Honey 500g,PROD00052,Multivitamin Men 60 Tablets,241
+PROD00065,Raw Wildflower Honey 500g,PROD00058,Ashwagandha KSM-66 60 Capsules,227
+PROD00065,Raw Wildflower Honey 500g,PROD00061,Moringa Leaf Powder 100g,226
+PROD00072,Eco Laundry Liquid 1L,PROD00078,Smoke & CO Detector Combo,542
+PROD00072,Eco Laundry Liquid 1L,PROD00077,Child Safety Cabinet Locks 8pk,528
+PROD00072,Eco Laundry Liquid 1L,PROD00079,Reusable Grocery Bags Set 5pk,523
+PROD00074,Stainless Steel Water Bottle 750ml,PROD00075,Beeswax Wraps Set of 3,536
+PROD00074,Stainless Steel Water Bottle 750ml,PROD00077,Child Safety Cabinet Locks 8pk,522
+PROD00074,Stainless Steel Water Bottle 750ml,PROD00072,Eco Laundry Liquid 1L,516
+PROD00079,Reusable Grocery Bags Set 5pk,PROD00078,Smoke & CO Detector Combo,561
+PROD00079,Reusable Grocery Bags Set 5pk,PROD00073,BPA-Free Food Storage Set 5pc,547
+PROD00079,Reusable Grocery Bags Set 5pk,PROD00077,Child Safety Cabinet Locks 8pk,546
+PROD00066,Organic Chia Seeds 250g,PROD00069,Guided Mindfulness Journal,226
+PROD00066,Organic Chia Seeds 250g,PROD00052,Multivitamin Men 60 Tablets,223
+PROD00066,Organic Chia Seeds 250g,PROD00055,Probiotic 10B CFU 30 Capsules,221
+PROD00077,Child Safety Cabinet Locks 8pk,PROD00079,Reusable Grocery Bags Set 5pk,546
+PROD00077,Child Safety Cabinet Locks 8pk,PROD00071,Plant-Based Multi-Surface Cleaner 500ml,536
+PROD00077,Child Safety Cabinet Locks 8pk,PROD00078,Smoke & CO Detector Combo,529
+PROD00078,Smoke & CO Detector Combo,PROD00079,Reusable Grocery Bags Set 5pk,561
+PROD00078,Smoke & CO Detector Combo,PROD00072,Eco Laundry Liquid 1L,542
+PROD00078,Smoke & CO Detector Combo,PROD00080,Compostable Trash Bags 30ct,534
+PROD00067,Eco-Friendly Yoga Mat 6mm,PROD00055,Probiotic 10B CFU 30 Capsules,236
+PROD00067,Eco-Friendly Yoga Mat 6mm,PROD00069,Guided Mindfulness Journal,235
+PROD00067,Eco-Friendly Yoga Mat 6mm,PROD00053,Omega-3 Fish Oil 60 Softgels,233
+PROD00073,BPA-Free Food Storage Set 5pc,PROD00079,Reusable Grocery Bags Set 5pk,547
+PROD00073,BPA-Free Food Storage Set 5pc,PROD00075,Beeswax Wraps Set of 3,545
+PROD00073,BPA-Free Food Storage Set 5pc,PROD00077,Child Safety Cabinet Locks 8pk,526
+PROD00076,Family First Aid Kit 50pc,PROD00072,Eco Laundry Liquid 1L,520
+PROD00076,Family First Aid Kit 50pc,PROD00075,Beeswax Wraps Set of 3,514
+PROD00076,Family First Aid Kit 50pc,PROD00074,Stainless Steel Water Bottle 750ml,512
+PROD00005,Soft Baby Massage Oil 100ml,PROD00076,Family First Aid Kit 50pc,164
+PROD00005,Soft Baby Massage Oil 100ml,PROD00075,Beeswax Wraps Set of 3,149
+PROD00005,Soft Baby Massage Oil 100ml,PROD00077,Child Safety Cabinet Locks 8pk,149
+PROD00014,Sensitive Skin Diapers M 36ct,PROD00072,Eco Laundry Liquid 1L,167
+PROD00014,Sensitive Skin Diapers M 36ct,PROD00077,Child Safety Cabinet Locks 8pk,158
+PROD00014,Sensitive Skin Diapers M 36ct,PROD00071,Plant-Based Multi-Surface Cleaner 500ml,154
+PROD00016,Baby Feeding Bottle 150ml,PROD00075,Beeswax Wraps Set of 3,143
+PROD00016,Baby Feeding Bottle 150ml,PROD00073,BPA-Free Food Storage Set 5pc,140
+PROD00016,Baby Feeding Bottle 150ml,PROD00076,Family First Aid Kit 50pc,136
+PROD00024,Baby Nail Care Kit,PROD00077,Child Safety Cabinet Locks 8pk,177
+PROD00024,Baby Nail Care Kit,PROD00073,BPA-Free Food Storage Set 5pc,168
+PROD00024,Baby Nail Care Kit,PROD00076,Family First Aid Kit 50pc,166
+PROD00075,Beeswax Wraps Set of 3,PROD00073,BPA-Free Food Storage Set 5pc,545
+PROD00075,Beeswax Wraps Set of 3,PROD00074,Stainless Steel Water Bottle 750ml,536
+PROD00075,Beeswax Wraps Set of 3,PROD00078,Smoke & CO Detector Combo,533
+PROD00080,Compostable Trash Bags 30ct,PROD00079,Reusable Grocery Bags Set 5pk,545
+PROD00080,Compostable Trash Bags 30ct,PROD00078,Smoke & CO Detector Combo,534
+PROD00080,Compostable Trash Bags 30ct,PROD00077,Child Safety Cabinet Locks 8pk,515
+PROD00069,Guided Mindfulness Journal,PROD00070,Lavender Pillow Mist 100ml,254
+PROD00069,Guided Mindfulness Journal,PROD00061,Moringa Leaf Powder 100g,251
+PROD00069,Guided Mindfulness Journal,PROD00059,Triphala Churna 100g,246
+PROD00071,Plant-Based Multi-Surface Cleaner 500ml,PROD00079,Reusable Grocery Bags Set 5pk,543
+PROD00071,Plant-Based Multi-Surface Cleaner 500ml,PROD00077,Child Safety Cabinet Locks 8pk,536
+PROD00071,Plant-Based Multi-Surface Cleaner 500ml,PROD00075,Beeswax Wraps Set of 3,528
+PROD00060,Turmeric Curcumin 500mg 60 Caps,PROD00057,Collagen Peptides Powder 200g,249
+PROD00060,Turmeric Curcumin 500mg 60 Caps,PROD00055,Probiotic 10B CFU 30 Capsules,237
+PROD00060,Turmeric Curcumin 500mg 60 Caps,PROD00056,Iron + Folic Acid 60 Tablets,231
+PROD00064,Cold Pressed Coconut Oil 500ml,PROD00052,Multivitamin Men 60 Tablets,236
+PROD00064,Cold Pressed Coconut Oil 500ml,PROD00055,Probiotic 10B CFU 30 Capsules,233
+PROD00064,Cold Pressed Coconut Oil 500ml,PROD00063,Protein Granola Bars 6pk,232
+PROD00070,Lavender Pillow Mist 100ml,PROD00054,Vitamin D3 + K2 60 Tablets,254
+PROD00070,Lavender Pillow Mist 100ml,PROD00069,Guided Mindfulness Journal,254
+PROD00070,Lavender Pillow Mist 100ml,PROD00057,Collagen Peptides Powder 200g,248
+PROD00052,Multivitamin Men 60 Tablets,PROD00057,Collagen Peptides Powder 200g,241
+PROD00052,Multivitamin Men 60 Tablets,PROD00065,Raw Wildflower Honey 500g,241
+PROD00052,Multivitamin Men 60 Tablets,PROD00056,Iron + Folic Acid 60 Tablets,240
+PROD00003,Baby Bubble Bath Liquid 500ml,PROD00071,Plant-Based Multi-Surface Cleaner 500ml,159
+PROD00003,Baby Bubble Bath Liquid 500ml,PROD00076,Family First Aid Kit 50pc,154
+PROD00003,Baby Bubble Bath Liquid 500ml,PROD00080,Compostable Trash Bags 30ct,146
+PROD00006,Baby Moisturising Lotion 200ml,PROD00072,Eco Laundry Liquid 1L,160
+PROD00006,Baby Moisturising Lotion 200ml,PROD00079,Reusable Grocery Bags Set 5pk,156
+PROD00006,Baby Moisturising Lotion 200ml,PROD00071,Plant-Based Multi-Surface Cleaner 500ml,154
+PROD00023,Baby Digital Thermometer,PROD00074,Stainless Steel Water Bottle 750ml,154
+PROD00023,Baby Digital Thermometer,PROD00072,Eco Laundry Liquid 1L,152
+PROD00023,Baby Digital Thermometer,PROD00075,Beeswax Wraps Set of 3,151
+PROD00053,Omega-3 Fish Oil 60 Softgels,PROD00067,Eco-Friendly Yoga Mat 6mm,233
+PROD00053,Omega-3 Fish Oil 60 Softgels,PROD00061,Moringa Leaf Powder 100g,229
+PROD00053,Omega-3 Fish Oil 60 Softgels,PROD00057,Collagen Peptides Powder 200g,228
+PROD00013,Sensitive Skin Diapers S 40ct,PROD00072,Eco Laundry Liquid 1L,157
+PROD00013,Sensitive Skin Diapers S 40ct,PROD00077,Child Safety Cabinet Locks 8pk,149
+PROD00013,Sensitive Skin Diapers S 40ct,PROD00073,BPA-Free Food Storage Set 5pc,145
+PROD00002,Tear-Free Baby Wash 400ml,PROD00078,Smoke & CO Detector Combo,176
+PROD00002,Tear-Free Baby Wash 400ml,PROD00076,Family First Aid Kit 50pc,158
+PROD00002,Tear-Free Baby Wash 400ml,PROD00077,Child Safety Cabinet Locks 8pk,156
+PROD00018,Silicone Baby Spoon Set,PROD00075,Beeswax Wraps Set of 3,162
+PROD00018,Silicone Baby Spoon Set,PROD00077,Child Safety Cabinet Locks 8pk,158
+PROD00018,Silicone Baby Spoon Set,PROD00080,Compostable Trash Bags 30ct,144
+PROD00001,Gentle Baby Shampoo 200ml,PROD00074,Stainless Steel Water Bottle 750ml,169
+PROD00001,Gentle Baby Shampoo 200ml,PROD00078,Smoke & CO Detector Combo,168
+PROD00001,Gentle Baby Shampoo 200ml,PROD00071,Plant-Based Multi-Surface Cleaner 500ml,167
+PROD00025,Baby Mosquito Repellent Patch 24ct,PROD00072,Eco Laundry Liquid 1L,173
+PROD00025,Baby Mosquito Repellent Patch 24ct,PROD00079,Reusable Grocery Bags Set 5pk,168
+PROD00025,Baby Mosquito Repellent Patch 24ct,PROD00071,Plant-Based Multi-Surface Cleaner 500ml,166
+PROD00011,Baby Hair & Scalp Oil 50ml,PROD00078,Smoke & CO Detector Combo,159
+PROD00011,Baby Hair & Scalp Oil 50ml,PROD00071,Plant-Based Multi-Surface Cleaner 500ml,157
+PROD00011,Baby Hair & Scalp Oil 50ml,PROD00072,Eco Laundry Liquid 1L,156
+PROD00020,Breast Milk Storage Bags 25ct,PROD00076,Family First Aid Kit 50pc,160
+PROD00020,Breast Milk Storage Bags 25ct,PROD00078,Smoke & CO Detector Combo,157
+PROD00020,Breast Milk Storage Bags 25ct,PROD00075,Beeswax Wraps Set of 3,153
+PROD00022,Infant Gripe Water 100ml,PROD00077,Child Safety Cabinet Locks 8pk,155
+PROD00022,Infant Gripe Water 100ml,PROD00072,Eco Laundry Liquid 1L,153
+PROD00022,Infant Gripe Water 100ml,PROD00074,Stainless Steel Water Bottle 750ml,143
+PROD00021,Baby Nasal Saline Drops 15ml,PROD00077,Child Safety Cabinet Locks 8pk,161
+PROD00021,Baby Nasal Saline Drops 15ml,PROD00075,Beeswax Wraps Set of 3,156
+PROD00021,Baby Nasal Saline Drops 15ml,PROD00074,Stainless Steel Water Bottle 750ml,150
+PROD00017,Anti-Colic Feeding Bottle 250ml,PROD00077,Child Safety Cabinet Locks 8pk,170
+PROD00017,Anti-Colic Feeding Bottle 250ml,PROD00073,BPA-Free Food Storage Set 5pc,170
+PROD00017,Anti-Colic Feeding Bottle 250ml,PROD00079,Reusable Grocery Bags Set 5pk,165
+PROD00012,Biodegradable Baby Wipes 80ct,PROD00077,Child Safety Cabinet Locks 8pk,175
+PROD00012,Biodegradable Baby Wipes 80ct,PROD00072,Eco Laundry Liquid 1L,166
+PROD00012,Biodegradable Baby Wipes 80ct,PROD00073,BPA-Free Food Storage Set 5pc,165
+PROD00009,Baby Talc-Free Powder 200g,PROD00076,Family First Aid Kit 50pc,165
+PROD00009,Baby Talc-Free Powder 200g,PROD00078,Smoke & CO Detector Combo,165
+PROD00009,Baby Talc-Free Powder 200g,PROD00075,Beeswax Wraps Set of 3,162
+PROD00004,Organic Cotton Baby Towel,PROD00077,Child Safety Cabinet Locks 8pk,156
+PROD00004,Organic Cotton Baby Towel,PROD00079,Reusable Grocery Bags Set 5pk,152
+PROD00004,Organic Cotton Baby Towel,PROD00078,Smoke & CO Detector Combo,148
+PROD00015,Sensitive Skin Diapers L 32ct,PROD00078,Smoke & CO Detector Combo,171
+PROD00015,Sensitive Skin Diapers L 32ct,PROD00072,Eco Laundry Liquid 1L,158
+PROD00015,Sensitive Skin Diapers L 32ct,PROD00071,Plant-Based Multi-Surface Cleaner 500ml,155
+PROD00019,Baby Food Masher & Bowl,PROD00074,Stainless Steel Water Bottle 750ml,156
+PROD00019,Baby Food Masher & Bowl,PROD00075,Beeswax Wraps Set of 3,156
+PROD00019,Baby Food Masher & Bowl,PROD00072,Eco Laundry Liquid 1L,148
+PROD00007,Nappy Rash Cream 50g,PROD00077,Child Safety Cabinet Locks 8pk,167
+PROD00007,Nappy Rash Cream 50g,PROD00072,Eco Laundry Liquid 1L,151
+PROD00007,Nappy Rash Cream 50g,PROD00080,Compostable Trash Bags 30ct,151

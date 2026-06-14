@@ -1,0 +1,81 @@
+product_id,name,category,subcategory,price,replenishment_days,is_premium
+PROD00001,Gentle Baby Shampoo 200ml,Baby Care,Bath & Body,282,30,False
+PROD00002,Tear-Free Baby Wash 400ml,Baby Care,Bath & Body,312,30,False
+PROD00003,Baby Bubble Bath Liquid 500ml,Baby Care,Bath & Body,264,45,False
+PROD00004,Organic Cotton Baby Towel,Baby Care,Bath & Body,586,180,True
+PROD00005,Soft Baby Massage Oil 100ml,Baby Care,Skin Care,371,45,False
+PROD00006,Baby Moisturising Lotion 200ml,Baby Care,Skin Care,300,30,False
+PROD00007,Nappy Rash Cream 50g,Baby Care,Skin Care,452,45,False
+PROD00008,Baby Sunscreen SPF 50 100ml,Baby Care,Skin Care,671,60,True
+PROD00009,Baby Talc-Free Powder 200g,Baby Care,Skin Care,262,30,False
+PROD00010,Organic Nappy Rash Balm 75g,Baby Care,Skin Care,734,45,True
+PROD00011,Baby Hair & Scalp Oil 50ml,Baby Care,Skin Care,414,45,False
+PROD00012,Biodegradable Baby Wipes 80ct,Baby Care,Diapering,307,15,False
+PROD00013,Sensitive Skin Diapers S 40ct,Baby Care,Diapering,679,15,False
+PROD00014,Sensitive Skin Diapers M 36ct,Baby Care,Diapering,979,15,False
+PROD00015,Sensitive Skin Diapers L 32ct,Baby Care,Diapering,801,15,False
+PROD00016,Baby Feeding Bottle 150ml,Baby Care,Feeding,510,90,False
+PROD00017,Anti-Colic Feeding Bottle 250ml,Baby Care,Feeding,699,90,True
+PROD00018,Silicone Baby Spoon Set,Baby Care,Feeding,372,180,False
+PROD00019,Baby Food Masher & Bowl,Baby Care,Feeding,677,180,False
+PROD00020,Breast Milk Storage Bags 25ct,Baby Care,Feeding,467,30,False
+PROD00021,Baby Nasal Saline Drops 15ml,Baby Care,Health & Safety,317,60,False
+PROD00022,Infant Gripe Water 100ml,Baby Care,Health & Safety,309,30,False
+PROD00023,Baby Digital Thermometer,Baby Care,Health & Safety,841,365,True
+PROD00024,Baby Nail Care Kit,Baby Care,Health & Safety,537,180,False
+PROD00025,Baby Mosquito Repellent Patch 24ct,Baby Care,Health & Safety,240,30,False
+PROD00026,Vitamin C Face Serum 30ml,Self Care,Face Care,859,60,True
+PROD00027,Hyaluronic Acid Moisturiser 50ml,Self Care,Face Care,912,60,True
+PROD00028,Niacinamide Toner 100ml,Self Care,Face Care,470,45,True
+PROD00029,SPF 50 Sunscreen Fluid 50ml,Self Care,Face Care,751,45,False
+PROD00030,Retinol Night Cream 50g,Self Care,Face Care,1359,60,True
+PROD00031,Clay Detox Face Mask 75ml,Self Care,Face Care,457,30,False
+PROD00032,Micellar Cleansing Water 200ml,Self Care,Face Care,468,45,False
+PROD00033,Under Eye Gel Cream 20ml,Self Care,Face Care,736,60,True
+PROD00034,Brightening Face Scrub 100g,Self Care,Face Care,556,30,False
+PROD00035,Rose Hip Body Oil 100ml,Self Care,Body Care,869,60,True
+PROD00036,Shea Butter Body Lotion 250ml,Self Care,Body Care,538,30,False
+PROD00037,Exfoliating Body Scrub 200g,Self Care,Body Care,588,30,False
+PROD00038,Stretch Mark Cream 150ml,Self Care,Body Care,723,60,True
+PROD00039,Argan Oil Hair Serum 50ml,Self Care,Hair Care,499,45,True
+PROD00040,Biotin Shampoo 300ml,Self Care,Hair Care,456,30,False
+PROD00041,Keratin Hair Mask 200ml,Self Care,Hair Care,553,30,True
+PROD00042,Scalp Scrub 100g,Self Care,Hair Care,642,30,False
+PROD00043,Dry Shampoo Spray 150ml,Self Care,Hair Care,362,30,False
+PROD00044,Charcoal Teeth Whitening Powder 50g,Self Care,Personal Hygiene,429,45,False
+PROD00045,Natural Deodorant Stick 75g,Self Care,Personal Hygiene,399,45,False
+PROD00046,Tongue Cleaner Copper,Self Care,Personal Hygiene,333,365,False
+PROD00047,Bamboo Toothbrush Set 4pk,Self Care,Personal Hygiene,219,90,False
+PROD00048,Lavender Bath Salts 500g,Self Care,Relaxation,371,30,False
+PROD00049,Aromatherapy Shower Steamer 6pk,Self Care,Relaxation,565,30,False
+PROD00050,Silk Sleep Eye Mask,Self Care,Relaxation,366,365,True
+PROD00051,Multivitamin Women 60 Tablets,Wellness,Supplements,986,30,False
+PROD00052,Multivitamin Men 60 Tablets,Wellness,Supplements,687,30,False
+PROD00053,Omega-3 Fish Oil 60 Softgels,Wellness,Supplements,964,30,True
+PROD00054,Vitamin D3 + K2 60 Tablets,Wellness,Supplements,512,30,False
+PROD00055,Probiotic 10B CFU 30 Capsules,Wellness,Supplements,940,30,True
+PROD00056,Iron + Folic Acid 60 Tablets,Wellness,Supplements,598,30,False
+PROD00057,Collagen Peptides Powder 200g,Wellness,Supplements,1244,30,True
+PROD00058,Ashwagandha KSM-66 60 Capsules,Wellness,Herbal,551,30,True
+PROD00059,Triphala Churna 100g,Wellness,Herbal,328,30,False
+PROD00060,Turmeric Curcumin 500mg 60 Caps,Wellness,Herbal,490,30,False
+PROD00061,Moringa Leaf Powder 100g,Wellness,Herbal,359,30,False
+PROD00062,Giloy Tulsi Immunity Drops 30ml,Wellness,Herbal,486,30,False
+PROD00063,Protein Granola Bars 6pk,Wellness,Nutrition,547,15,False
+PROD00064,Cold Pressed Coconut Oil 500ml,Wellness,Nutrition,712,30,False
+PROD00065,Raw Wildflower Honey 500g,Wellness,Nutrition,573,30,False
+PROD00066,Organic Chia Seeds 250g,Wellness,Nutrition,333,30,False
+PROD00067,Eco-Friendly Yoga Mat 6mm,Wellness,Fitness,1204,365,True
+PROD00068,Resistance Bands Set 5-Level,Wellness,Fitness,679,365,False
+PROD00069,Guided Mindfulness Journal,Wellness,Mental Wellness,512,180,False
+PROD00070,Lavender Pillow Mist 100ml,Wellness,Mental Wellness,348,45,False
+PROD00071,Plant-Based Multi-Surface Cleaner 500ml,Family Essentials,Home,402,30,False
+PROD00072,Eco Laundry Liquid 1L,Family Essentials,Home,450,30,False
+PROD00073,BPA-Free Food Storage Set 5pc,Family Essentials,Kitchen,988,180,True
+PROD00074,Stainless Steel Water Bottle 750ml,Family Essentials,Kitchen,752,365,True
+PROD00075,Beeswax Wraps Set of 3,Family Essentials,Kitchen,454,90,False
+PROD00076,Family First Aid Kit 50pc,Family Essentials,Safety,1058,365,True
+PROD00077,Child Safety Cabinet Locks 8pk,Family Essentials,Safety,352,365,False
+PROD00078,Smoke & CO Detector Combo,Family Essentials,Safety,1375,730,True
+PROD00079,Reusable Grocery Bags Set 5pk,Family Essentials,Household,344,180,False
+PROD00080,Compostable Trash Bags 30ct,Family Essentials,Household,292,30,False

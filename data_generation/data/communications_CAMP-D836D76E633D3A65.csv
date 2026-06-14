@@ -1,0 +1,3 @@
+"communication_id","campaign_id","customer_id","channel","campaign_type","message","status","retry_count","created_at"
+"COMM-7FD8B708A5BC07A3B133","CAMP-D836D76E633D3A65","CUST00007","EMAIL","NURTURE","Continue building long-term relationships. Offer: Loyalty Reward","CREATED","0","2026-06-14T00:09:36Z"
+"COMM-F4527F222A4C6BAF50BB","CAMP-D836D76E633D3A65","CUST05072","EMAIL","NURTURE","Continue building long-term relationships. Offer: Loyalty Reward","CREATED","0","2026-06-14T00:09:36Z"
